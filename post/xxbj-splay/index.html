@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    Push_Y&#39;s blog
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Push_Y&#39;s blog">
+<meta name="description" content="竹密无妨溪水过，天高不碍白云飞">
+<meta name="keywords" content="">
+<script async src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<link rel="stylesheet" href="https://www.wzsyyh.ml//styles/main.css" />
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/css/style.min.css" />
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/tocbot.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/script.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/icon.min.js"></script>
+        
+            <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/Card/prism.min.js"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/css/Card/prism.min.css" />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+            <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+            
+                <!--点击特效-->
+                <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/love.min.js"></script>
+                
+                        <!--CDN样式-->
+                        <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/hit-kounter-lc-0.3.0.js"></script>
+                        <script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+                        
+                            <script>
+                                (function() {
+                                    var bp = document.createElement('script');
+                                    var curProtocol = window.location.protocol.split(':')[0];
+                                    if (curProtocol === 'https') {
+                                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                                    } else {
+                                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                                    }
+                                    var s = document.getElementsByTagName("script")[0];
+                                    s.parentNode.insertBefore(bp, s);
+                                })();
+                            </script>
+                            
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://www.wzsyyh.ml/">
+                    Push_Y&#39;s blog
+                </a>
+            </div>
+            <div id="tp-weather-widget"></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        首页
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        文章
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        标签
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        关于
+                    </a>
+                    
+                    <a class="menu-item" href="/friends">
+                        友链
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1626611190300" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://www.wzsyyh.ml/">
+                            Push_Y&#39;s blog
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1626611190300" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            首页
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            文章
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            标签
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            关于
+                        </a>
+                        
+                        <a class="menu-item" href="/friends">
+                            友链
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+
+
+
+    <script>
+        (function(a, h, g, f, e, d, c, b) {
+            b = function() {
+                d = h.createElement(g);
+                c = h.getElementsByTagName(g)[0];
+                d.src = e;
+                d.charset = "utf-8";
+                d.async = 1;
+                c.parentNode.insertBefore(d, c)
+            };
+            a["SeniverseWeatherWidgetObject"] = f;
+            a[f] || (a[f] = function() {
+                (a[f].q = a[f].q || []).push(arguments)
+            });
+            a[f].l = +new Date();
+            if (a.attachEvent) {
+                a.attachEvent("onload", b)
+            } else {
+                a.addEventListener("load", b, false)
+            }
+        }(window, document, "script", "SeniverseWeatherWidget", "//cdn.sencdn.com/widget2/static/js/bundle.js?t=" + parseInt((new Date().getTime() / 100000000).toString(), 10)));
+        window.SeniverseWeatherWidget('show', {
+            flavor: "slim",
+            location: "WWEFQFPJZ7T8",
+            geolocation: true,
+            language: "auto",
+            unit: "c",
+            theme: "auto",
+            token: "61bcc333-3305-4728-9465-6785274bb0a3",
+            hover: "enabled",
+            container: "tp-weather-widget"
+        })
+    </script>
+    
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                「学习笔记」平衡树Splay
+                            </h1>
+                            
+                                <!--en-->
+                                <div class="post-meta en">
+                                    Author:
+                                    <a itemprop="author" rel="author" href="/">
+                                        Push_Y's blog
+                                    </a>
+                                    <span class="post-time">
+                                Date: <a href="#">2021-02-19</a>
+                            </span>
+                                    <span class="post-readtime">Reading Time:<a
+                                    href="#">10.0
+                                    mins</a></span>
+                                    <span class="post-words">words:<a href="#">1707</a></span>
+                                    
+                                        <span class="post-category">
+                                Category:
+                                
+                                <a href="https://www.wzsyyh.ml/tag/xxbj/">学习笔记</a>
+                                
+                            </span>
+                                        
+                                            Views:
+                                            <span data-hk-page="current"> - </span>
+                                            
+                                </div>
+                                
+                        </header>
+                        
+                        <div class="post-content">
+                            <p>upd 2021.6.10:添加了<a href="https://www.luogu.com.cn/problem/P6136">P6136 【模板】普通平衡树（数据加强版）</a>的实现</p>
+<h2 id="1rotatex">(1)Rotate(x)</h2>
+<p>将 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">x</span></span></span></span> 向上移动一级，并将 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mi>a</mi><mo>[</mo><mi>x</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">fa[x]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault">a</span><span class="mopen">[</span><span class="mord mathdefault">x</span><span class="mclose">]</span></span></span></span> 作为儿子，保持 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>B</mi><mi>S</mi><mi>T</mi></mrow><annotation encoding="application/x-tex">BST</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span></span></span></span> 的性质。</p>
+<pre><code class="language-cpp">inline void Rotate(const int &amp;x){//旋转 
+	int y=fa[x],z=fa[y]; 
+	int b=(lc[y]==x)?rc[x]:lc[x];
+	fa[x]=z,fa[y]=x;
+	if(b)fa[b]=y;
+	if(z)(y==lc[z]?lc[z]:rc[z])=x;
+	if(x==lc[y])rc[x]=y,lc[y]=b;
+	else lc[x]=y,rc[y]=b;
+}
+</code></pre>
+<h2 id="2splayxtarget">(2)Splay(x,target)</h2>
+<p>将伸展树中节点 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">x</span></span></span></span> 调整为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>t</mi><mi>a</mi><mi>r</mi><mi>g</mi><mi>e</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">target</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.80952em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">t</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">e</span><span class="mord mathdefault">t</span></span></span></span> 的儿子。是伸展树的核心。</p>
+<ul>
+<li>如果爷爷是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>t</mi><mi>a</mi><mi>r</mi><mi>g</mi><mi>e</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">target</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.80952em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">t</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">e</span><span class="mord mathdefault">t</span></span></span></span>，单旋一次</li>
+<li>如果爷爷不是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>t</mi><mi>a</mi><mi>r</mi><mi>g</mi><mi>e</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">target</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.80952em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">t</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">e</span><span class="mord mathdefault">t</span></span></span></span> 且父亲和爷爷方向一致，先旋父亲再旋自己</li>
+<li>如果爷爷不是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>t</mi><mi>a</mi><mi>r</mi><mi>g</mi><mi>e</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">target</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.80952em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">t</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">e</span><span class="mord mathdefault">t</span></span></span></span> 且父亲和爷爷方向不同，旋两次自己</li>
+</ul>
+<pre><code class="language-cpp">inline bool Wrt(const int &amp;x){//判断x是否为父亲的右儿子 
+	return rc[fa[x]]==x;
+}
+inline void Splay(const int &amp;x,const int &amp;tar){//调整 
+	while(fa[x]!=tar){
+		if(fa[fa[x]]!=tar)
+			Wrt(x)==Wrt(fa[x])?Rotate(fa[x]):Rotate(x);
+		Rotate(x);
+	}
+	if(!tar)rt=x;
+}
+</code></pre>
+<h2 id="3findv">(3)Find(v)</h2>
+<pre><code class="language-cpp">inline int Find(int v){
+	int x=rt;
+	while(x){
+		if(v==val[x])break;
+		if(v&gt; val[x])x=rc[x];
+		else x=lc[x];
+	}
+	if(x)Splay(x,0);
+	return x;
+}
+</code></pre>
+<h2 id="4insertv">(4)Insert(v)</h2>
+<pre><code class="language-cpp">inline void Insert(int v){//插入 
+	int x=rt,y=0,lr;
+	while(x){
+		++sz[y=x];
+		if(v&lt;val[x])lr=0,x=lc[x];
+		else lc=1,x=rc[x];
+	}
+	x=++tot;
+	fa[x]=y,val[x]=v,sz[x]=1;
+	if(y)(lr==0?lc[y]:rc[y])=x;
+	Splay(x,0);
+}
+</code></pre>
+<h2 id="5joinuv">(5)Join(u,v)</h2>
+<pre><code class="language-cpp">inline void Join(int u,int v){//合并 
+	fa[u]=fa[v]=0;
+	int w=u;
+	while(rc[w])w=rc[w];
+	Splay(w,0);
+	rc[w]=v,fa[v]=w;
+}
+</code></pre>
+<h2 id="6deleteu">(6)Delete(u)</h2>
+<pre><code class="language-cpp">inline void Delete(int u){//删除 
+	Splay(u,0);
+	if(!lc[u] || !rc[u])
+		fa[rt=lc[u]+rc[u]]=0;
+	else Join(lc[u],rc[u]);
+	lc[u]=rc[u]=0;
+}
+</code></pre>
+<h2 id="7getrankv">(7)GetRank(v)</h2>
+<p>排名可表示为左子树大小+1</p>
+<pre><code class="language-cpp">inline int GetRank(int v){//查询排名 
+	int x=Find(v);
+	return sz[lc[x]]+1;
+}
+</code></pre>
+<h2 id="8spiltv">(8)Spilt(v)</h2>
+<p>以元素 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>v</mi></mrow><annotation encoding="application/x-tex">v</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span></span></span></span> 所在的节点 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">x</span></span></span></span> 为界，将伸展树分为左右两颗</p>
+<p>首先执行 <code>Find(v)</code> ，再 <code>Splay(x,0)</code> ，最后 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">x</span></span></span></span>  的左子树为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>S</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">S1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord">1</span></span></span></span> ，右子树为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>S</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">S2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord">2</span></span></span></span></p>
+<h3 id="其他">其他</h3>
+<p>除了上述8种基本操作，伸展树还支持求前驱、后继、最值、排名第k的元素等操作</p>
+<p>upd:2021.4.27 <a href="https://www.luogu.com.cn/problem/P3369">P3369 【模板】普通平衡树</a></p>
+<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+inline int gin(){
+	int s=0,f=1;
+	char c=getchar();
+	while(c&lt;'0' || c&gt;'9'){
+		if(c=='-') f=-1;
+		c=getchar();
+	}
+	while(c&gt;='0'&amp;&amp;c&lt;='9'){
+		s=(s&lt;&lt;3)+(s&lt;&lt;1)+(c^48);
+		c=getchar();
+	}
+	return s*f;
+}
+
+const int N=1e6+5;
+int n,fa[N],lc[N],rc[N],val[N],sz[N],rt,tot,cnt[N];
+
+inline void push(int x){
+	if(x){
+		sz[x]=cnt[x];
+		if(lc[x]) sz[x]+=sz[lc[x]];
+		if(rc[x]) sz[x]+=sz[rc[x]];
+	}
+	return;
+}
+inline bool get(int x){
+	return x==rc[fa[x]];
+}
+inline void clear(int x){
+	lc[x]=rc[x]=fa[x]=val[x]=sz[x]=cnt[x]=0;
+}
+
+void rotate(int x){
+	int y=fa[x],z=fa[y];
+	int b=lc[y]==x ? rc[x] : lc[x];
+	fa[x]=z,fa[y]=x;
+	if(b) fa[b]=y;
+	if(z) (lc[z]==y ? lc[z] : rc[z])=x;
+	if(x==lc[y]) rc[x]=y,lc[y]=b;
+	else lc[x]=y,rc[y]=b;
+	push(x);
+	push(y);
+}
+
+void splay(int x,int tar=0){
+	while(fa[x]!=tar){
+		if(fa[fa[x]]!=tar)
+			get(x)==get(fa[x]) ? rotate(fa[x]) : rotate(x);
+		rotate(x);
+	}
+	if(!tar) rt=x;
+}
+
+inline int find(int v){
+	int x=rt;
+	while(x){
+		if(val[x]==v) break;
+		if(val[x]&gt; v) x=lc[x];
+		else x=rc[x];
+	}
+	if(x) splay(x);
+	return x;
+}
+
+inline void ins(int v){
+	int w=find(v);
+	if(w){
+		cnt[w]++;
+		return;
+	}
+	int x=rt,y=0,dir;
+	while(x){
+		++sz[y=x];
+		if(v&lt;val[x]) x=lc[x],dir=0;
+		else x=rc[x],dir=1;
+	}
+	x=++tot;
+	fa[x]=y,val[x]=v,sz[x]=1,cnt[x]=1;
+	if(y) (dir==0 ? lc[y] : rc[y])=x;
+	push(y);
+	splay(x);
+}
+
+inline int rk(int v){
+	int x=find(v);
+	return sz[lc[x]]+1;
+}
+
+inline int kth(int k){
+	int x=rt,y=k;
+	while(x){
+		if(y&lt;=sz[lc[x]])
+			x=lc[x];
+		else {
+			y-=sz[lc[x]]+cnt[x];
+			if(y&lt;=0){
+				splay(x);
+				return val[x];
+			}
+			x=rc[x];
+		}
+	}
+}
+
+inline void join(int u,int v){
+	fa[u]=fa[v]=0;
+	int w=u;
+	while(rc[w]) w=rc[w];
+	splay(w);
+	rc[w]=v,fa[v]=w;
+}
+
+inline void del(int v){
+	int x=find(v);
+	if(cnt[x]&gt;=2){
+		cnt[x]--;
+		push(x);
+		return;
+	}
+	if(!lc[x] || !rc[x])
+		fa[rt=lc[x]|rc[x]]=0;
+	else join(lc[x],rc[x]);
+}
+
+inline int pre(){
+	int x=lc[rt];
+	while(rc[x]) x=rc[x];
+	splay(x);
+	return val[x];
+}
+
+inline int nxt(){
+	int x=rc[rt];
+	while(lc[x]) x=lc[x];
+	splay(x);
+	return val[x];
+}
+
+int main(){
+	n=gin();
+	for(int i=1;i&lt;=n;i++){
+		int op=gin(),x=gin();
+		switch(op){
+			case 1:ins(x);break;
+			case 2:del(x);break;
+			case 3:printf(&quot;%d\n&quot;,rk(x));break;
+			case 4:printf(&quot;%d\n&quot;,kth(x));break;
+			case 5:ins(x);printf(&quot;%d\n&quot;,pre());del(x);break;
+			case 6:ins(x);printf(&quot;%d\n&quot;,nxt());del(x);break;
+		}
+	}
+	return 0;
+}
+</code></pre>
+<p>upd 2021.6.10:<a href="https://www.luogu.com.cn/problem/P6136">P6136 【模板】普通平衡树（数据加强版）</a></p>
+<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+inline int gin(){
+    int s=0,f=1;
+    char c=getchar();
+    while(c&lt;'0' || c&gt;'9'){
+        if(c=='-') f=-1;
+        c=getchar();
+    }
+    while(c&gt;='0'&amp;&amp;c&lt;='9'){
+        s=(s&lt;&lt;3)+(s&lt;&lt;1)+(c^48);
+        c=getchar();
+    }
+    return s*f;
+}
+
+const int N=2e6+5;
+int n,m,fa[N],lc[N],rc[N],val[N],sz[N],rt,tot,cnt[N];
+
+inline void push(int x){
+    if(x){
+        sz[x]=cnt[x];
+        if(lc[x]) sz[x]+=sz[lc[x]];
+        if(rc[x]) sz[x]+=sz[rc[x]];
+    }
+    return;
+}
+
+void rotate(int x){
+    int p=fa[x],g=fa[p];
+    int b=lc[p]==x?rc[x]:lc[x];
+    fa[x]=g,fa[p]=x;
+    if(b) fa[b]=p;
+    if(g) (lc[g]==p?lc[g]:rc[g])=x;
+    if(x==lc[p]) rc[x]=p,lc[p]=b;
+    else lc[x]=p,rc[p]=b;
+    push(p);push(x);
+}
+
+inline bool wrt(int x){return x==rc[fa[x]];}
+void splay(int x,int tar=0){
+    while(fa[x]!=tar){
+        if(fa[fa[x]]!=tar)
+            wrt(x)==wrt(fa[x])?rotate(fa[x]):rotate(x);
+        rotate(x);
+    }
+    if(!tar) rt=x;
+}
+
+inline int find(int v){
+    int x=rt;
+    while(x){
+        if(v==val[x]) break;
+        if(val[x]&gt;v) x=lc[x];
+        else x=rc[x];
+    }
+    if(x) splay(x);
+    return x;
+}
+
+inline void ins(int v){
+    int x=rt,p=0,dir=0;
+    while(x){
+        ++sz[p=x];
+        if(v==val[x]){cnt[x]++;push(x);splay(x);return;}
+        if(v&lt; val[x]) x=lc[x],dir=0;
+        else x=rc[x],dir=1;
+    }
+    x=++tot;
+    fa[x]=p,val[x]=v,sz[x]=1,cnt[x]=1;
+    if(p) (dir==0?lc[p]:rc[p])=x;
+    push(p);
+    splay(x);
+}
+
+inline void join(int u,int v){
+    fa[u]=0,fa[v]=0;
+    int w=u;
+    while(rc[w]) w=rc[w];
+    splay(w);
+    rc[w]=v,fa[v]=w;
+}
+
+inline void del(int v){
+    int x=find(v);
+    if(cnt[x]&gt;=2){cnt[x]--;push(x);return;}
+    if(!lc[x] || !rc[x])
+        fa[rt=lc[x]|rc[x]]=0;
+    else join(lc[x],rc[x]);
+}
+
+inline int rk(int v){
+    int x=find(v);
+    return sz[lc[x]]+1;
+}
+
+inline int kth(int k){
+    int x=rt,y=k;
+    while(x){
+        if(y&lt;=sz[lc[x]]) x=lc[x];
+        else {
+            y-=sz[lc[x]]+cnt[x];
+            if(y&lt;=0){
+                splay(x);
+                return val[x];
+            }
+            x=rc[x];
+        }
+    }
+}
+
+inline int pre(){
+    int x=lc[rt];
+    while(rc[x]) x=rc[x];
+    splay(x);
+    return x;
+}
+inline int nxt(){
+    int x=rc[rt];
+    while(lc[x]) x=lc[x];
+    splay(x);
+    return x;
+}
+
+signed main(){
+    n=gin(),m=gin();
+    for(int i=1;i&lt;=n;i++) ins(gin());
+    int last=0,ans=0;
+    for(int i=1;i&lt;=m;i++){
+        int op=gin(),x=gin();
+        x^=last;
+        switch(op){
+            case 1:ins(x);break;
+            case 2:del(x);break;
+            case 3:ins(x);last=rk(x);del(x);break;
+            case 4:last=kth(x);break;
+            case 5:ins(x);last=val[pre()];del(x);break;
+            case 6:ins(x);last=val[nxt()];del(x);break;
+        }
+        if(op&gt;=3) ans^=last;
+    }
+    printf(&quot;%d\n&quot;,ans);
+    return 0;
+}
+</code></pre>
+
+                        </div>
+                        
+                                
+                                    
+                                        <!--en-->
+                                        <section class="post-copyright en">
+                                            <p class="copyright-item">
+                                                <span>Author:</span>
+                                                <span>Push_Y's blog</span>
+                                            </p>
+
+                                            <p class="copyright-item">
+                                                <span>Permalink:</span>
+                                                <span><a href="https://www.wzsyyh.ml/post/xxbj-splay/">https://www.wzsyyh.ml/post/xxbj-splay/</a></span>
+                                            </p>
+
+                                            <p class="copyright-item">
+                                                <span>License:</span>
+                                                <span>MIT License</span>
+                                            </p>
+                                        </section>
+                                        
+                                                
+                                                    
+                                                        <!-- Share-->
+                                                        <span style="margin-right:15px">
+                                                    <i class="post-share"></i>
+                                                    <span>Share:</span>
+                                                        <a title="QR Code" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.wzsyyh.ml/post/xxbj-splay/"><i class="fa fa-qrcode"></i></a>
+                                                        <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.wzsyyh.ml/post/xxbj-splay/&sharesource=qzone&title=「学习笔记」平衡树Splay&pics=https://www.wzsyyh.ml//images/avatar.png?v=1626611190300&summary="><i class="fa fa-qq"></i></a>
+                                                        <a title="Weibo" target="_blank" href="https://service.weibo.com/share/share.php?url=https://www.wzsyyh.ml/post/xxbj-splay/&sharesource=weibo&title=「学习笔记」平衡树Splay + " - " + &pic="https://www.wzsyyh.ml//images/avatar.png?v=1626611190300 "><i class="fa fa-weibo "></i></a>
+                                                        
+                                                            <div class="reward ">
+                                                                <div class="reward-button ">&yen;
+                                                                    <span class="reward-code "> 
+                                                                <span class="alipay-code "> <img class="alipay-img " alt = "support " src="https://www.wzsyyh.ml/images/zfb.jpg"><b>Alipay</b> </span>
+                                                                    <span class="wechat-code "> <img alt ="support " class="wechat-img " src="https://www.wzsyyh.ml/images/wx.jpg"><b>Wechat</b> </span> </span>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                                </span>
+                                                                <!--en-->
+                                                                <section class="post-tags en ">
+                                                                    <div>
+                                                                        <span>Tag(s):</span>
+                                                                        <span class="tag ">
+                        
+                        
+                        <a href="https://www.wzsyyh.ml/tag/xxbj/">#
+                                                学习笔记
+                                                    </a>
+                                                    
+                                                        
+                                                            </span>
+                                                                    </div>
+                                                                    <div>
+                                                                        <a href="javascript:window.history.back();">back</a>
+                                                                        <span>&dot;</span>
+                                                                        <a href="#">home</a>
+                                                                    </div>
+                                                                </section>
+                                                                
+                                                                                <!---->
+                                                                                <section class="post-nav">
+                                                                                    
+                                                                                        <a class="prev" rel="prev" href="https://www.wzsyyh.ml/post/xxbj-ac-automaton/">
+                                                                                            「学习笔记」AC自动机
+                                                                                        </a>
+                                                                                        
+                                                                                            
+                                                                                                <a class="next" rel="next" href="https://www.wzsyyh.ml/post/OI-note/">
+                                                                                                    OI日志
+                                                                                                </a>
+                                                                                                
+                                                                                </section>
+                    </article>
+                </div>
+                
+                    
+                        <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container" style="width: 100%;max-width: 780px;margin: auto;"></div>
+
+<script>
+    var gitalk = new Gitalk({
+        clientID: '6cf2cde57d26c85e2a02',
+        clientSecret: '6629c416c115113f97270a5a72a08b56a26b7aba',
+        repo: 'review',
+        owner: 'wzsyyh',
+        admin: ['wzsyyh'],
+        id: (location.pathname).substring(0, 49), // Ensure uniqueness and length less than 50
+        distractionFreeMode: false // Facebook-like distraction free mode
+    })
+
+    gitalk.render('gitalk-container')
+</script>
+                            
+                                        
+                                            
+            </div>
+    </div>
+    </div>
+    </div>
+    
+        <footer id="footer" class="footer">
+            <div class="copyright">
+                
+                        Powered by <a href="https://github.com/wzsyyh/wzsyyh.github.io" target="_blank">wzsyyh</a>
+                            
+                                <b id="hitokoto"></b><br>
+                                
+                                        <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg>
+                                        Push_Y&#39;s blog &copy;Copyright
+                                            <script>
+                                                var date = new Date();
+                                                document.write("" + date.getFullYear());
+                                            </script>
+                                            | Powered by
+                                            <a href="https://coding.net" target="_blank">
+                                                Coding.net
+                                            </a>
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.7.6
+                </div>
+                
+                    <script>
+                        var port = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + port + '</div>')
+                    </script>
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+                    
+                    loadlive2d();
+                    
+                    
+                    hitokoto();
+                    
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    var newDate = new Date();
+                    newDate.setTime(1626611190300);
+                    console.log(" Blog Update Time: " + newDate.toLocaleDateString());
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>
