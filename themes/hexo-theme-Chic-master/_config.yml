@@ -1,5 +1,5 @@
 # Header
-navname: Bentham's Blog
+navname: Push_Y's Blog
 
 # navigatior items
 nav:
@@ -12,10 +12,10 @@ nav:
 favicon: /favicon.ico
 
 # Profile
-nickname: Jeremy Bentham
+nickname: Push_Y
 
 ### this variable is MarkDown form.
-description: Lorem ipsum dolor sit amet, **consectetur adipiscing elit.** <br>Fusce eget urna vitae velit *eleifend interdum at ac* nisi.
+description: 竹密无妨溪水过 天高不碍白云飞
 avatar: /image/avatar.jpeg
 
 # main menu navigation
@@ -33,23 +33,23 @@ links:
   # Gallery:
   # RSS:
   # AliPay:
-  ZhiHu: https://www.zhihu.com/people/sirice
+  ZhiHu: https://www.zhihu.com/people/yi-yi-qing-41
   # LinkedIn:
-  # FaceBook:
-  # Twitter:
+  FaceBook: https://www.facebook.com/profile.php?id=100029087942412
+  Twitter: https://twitter.com/NpXRBZRAcmuZ6RI
   # Skype:
   # CodeSandBox:
   # CodePen:
   # Sketch:
   # Gitlab:
   # Dribbble:
-  Instagram:
-  Reddit:
+  Instagram: https://www.instagram.com/wzsyyh/
+  # Reddit:
   # YouTube:
   # QQ:
   # Weibo:
   # WeChat:
-  Github: https://github.com/Siricee
+  Github: https://github.com/wzsyyh
 
 # how links show: you have 2 choice--text or icon.
 links_text_enable: false
@@ -101,6 +101,6 @@ scripts:
 ## https://www.mathjax.org
 mathjax:
   enable: true
-  import: demand # global or demand
+  import: global # global or demand
   ## global: all pages will load mathjax,this will degrade performance and some grammers may be parsed wrong.
   ## demand: Recommend option,if your post need fomula, you can declare 'mathjax: true' in Front-matter
