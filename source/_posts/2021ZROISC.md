@@ -144,3 +144,47 @@ T10 http://poj.org/problem?id=2752 ✔️
 T11 https://www.luogu.com.cn/problem/P2375 ✔️吃老本
 
 T12 https://www.luogu.com.cn/problem/P4600
+
+## Day 6
+
+依然是字符串 https://vjudge.net/contest/448336
+
+扩展kmp
+
+T1 https://acm.hdu.edu.cn/showproblem.php?pid=2594
+
+T2 https://acm.hdu.edu.cn/showproblem.php?pid=6629
+
+马拉车拉马
+
+T3 https://codeforces.com/gym/101981/attachments
+
+T4 https://www.luogu.com.cn/problem/P3454
+
+## Day 7
+
+21 暑期集训C班 day2
+
+T1 贪心sbt。
+
+T2 自己脑残加了些特判来优化，爆了。还有就是0+没有特判。
+
+T3 写了二分+二分，O(qlognlogm)，还算得了个80分吧。
+
+艹，已经很接近正解了。。。
+
+我的二分+二分相当于两次二分出 $i$ 和 $j$ ，看是否满足 $i+j=\frac{n}{2}$ 。
+
+其实只用一次二分 $i$ ，看 $\frac{n}{2}-i$ 是否在另一个序列中。
+
+T4 正解显然是 AC自动机+数位dp ，然而数位dp写炸了，最后想交个暴力结果暴力也挂了，抱灵了。
+
+$f[statu][i][0/1][0/1][bin]$
+
+有关中位数的题1 https://www.luogu.com.cn/problem/AT2165
+
+二分答案mid，最下面一行大于 $mid$ 设为 $1$ ，小于 $mid$ 设为 $0$ 。
+
+有关中位数的题2 https://acm.ecnu.edu.cn/problem/3681/
+
+二分一个 $mid$ ，大于 $mid$ 的设为 $1$ ，小于 $mid$ 的设为 $-1$ ，按拓扑序dp求最长路看是否大于 $0$ 。
