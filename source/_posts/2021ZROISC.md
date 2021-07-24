@@ -188,3 +188,9 @@ $f[statu][i][0/1][0/1][bin]$
 有关中位数的题2 https://acm.ecnu.edu.cn/problem/3681/
 
 二分一个 $mid$ ，大于 $mid$ 的设为 $1$ ，小于 $mid$ 的设为 $-1$ ，按拓扑序dp求最长路看是否大于 $0$ 。
+
+## Day 8
+
+https://acm.hdu.edu.cn/showproblem.php?pid=6800
+
+https://www.luogu.com.cn/problem/CF1365G
