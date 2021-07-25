@@ -14,6 +14,8 @@ namespace SegmentTree{
 
     int sz[N<<2];
 
+    inline void pushup(int x){sz[x]=sz[ls]+sz[rs];}
+
     void upd(int pos,int d,int x=1,int l=1,int r=m){
         if(l==r){
             sz[x]+=d;
@@ -35,11 +37,12 @@ namespace SegmentTree{
     int kth(int k,int x=1,int l=1,int r=m){
         if(l==r) return l;
         int mid=l+r>>1,t=sz[ls];
-        if(t>=k) return kth(k,ls,l,mid);
+        if(k<=t) return kth(k,ls,l,mid);
         else return kth(k-t,rs,mid+1,r);
     }
 
 }
+
 ```
 
 ### Splay
@@ -161,56 +164,56 @@ namespace Treap{
         p=x;
     }
 
-    void ins(int& p,int v){
-        if(!p){
-            p=++idx;
-            sz[p]=cnt[p]=1;
-            val[p]=v;
-            rd[p]=rand();
+    void ins(int& x,int v){
+        if(!x){
+            x=++idx;
+            sz[x]=cnt[x]=1;
+            ch[x][0]=ch[x][1]=0;
+            val[x]=v;
+            rd[x]=rand();
             return ;
         }
-        if(val[p]==v){
-            cnt[p]++;
-            sz[p]++;
+        if(v==val[x]){
+            cnt[x]++,sz[x]++;
             return ;
         }
-        int k=v>val[p];
-        ins(ch[p][k],v);
-        if(rd[p]<rd[ch[p][k]]) rotate(p,k^1);
-        push(p);
+        int k=v>val[x];
+        ins(ch[x][k],v);
+        if(rd[x]<rd[ch[x][k]]) rotate(x,k^1);
+        push(x);
     }
 
-    void del(int& p,int v){
-        if(!p) return ;
-        if(v<val[p]) del(ch[p][0],v);
-        else if(v>val[p]) del(ch[p][1],v);
+    void del(int& x,int v){
+        if(!x) return ;
+        if(v<val[x]) del(ch[x][0],v);
+        else if(v>val[x]) del(ch[x][1],v);
         else {
-            if(!ch[p][0] && !ch[p][1]){
-                cnt[p]--,sz[p]--;
-                if(cnt[p]==0) p=0;
+            if(!ch[x][0] && !ch[x][1]){
+                cnt[x]--,sz[x]--;
+                if(cnt[x]==0) x=0;
             }
-            else if(ch[p][0] && !ch[p][1]){
-                rotate(p,1);
-                del(ch[p][1],v);
+            else if(ch[x][0] && !ch[x][1]){
+                rotate(x,1);
+                del(ch[x][1],v);
             }
-            else if(!ch[p][0] && ch[p][1]){
-                rotate(p,0);
-                del(ch[p][0],v);
+            else if(!ch[x][0] && ch[x][1]){
+                rotate(x,0);
+                del(ch[x][0],v);
             }
             else {
-                int k=(rd[ch[p][0]]>rd[ch[p][1]]);
-                rotate(p,k);
-                del(ch[p][k],v);
+                int k=rd[ch[x][0]]>rd[ch[x][1]];
+                rotate(x,k);
+                del(ch[x][k],v);
             }
         }
-        push(p);
+        push(x);
     }
 
     int rk(int x,int v){
         if(!x) return 0;
-        if(val[x]==v) return sz[ch[x][0]]+1;
-        if(val[x]<v) return sz[ch[x][0]]+cnt[x]+rk(ch[x][1],v);
-        if(val[x]>v) return rk(ch[x][0],v);
+        if(v==val[x]) return sz[ch[x][0]]+1;
+        if(v<val[x]) return rk(ch[x][0],v);
+        else return sz[ch[x][0]]+cnt[x]+rk(ch[x][1],v);
     }
 
     int kth(int x,int k){
