@@ -248,25 +248,18 @@ namespace fhq_Treap{
     inline void pushup(int x){sz[x]=sz[ch[x][0]]+sz[ch[x][1]]+1;}
 
     void split(int x,int v,int& a,int& b){
-        if(!x){
-            a=b=0;
-            return ;
-        }
-        if(val[x]<=v){
-            a=x;
-            split(ch[x][1],v,ch[a][1],b);
-        }
+        if(!x) a=b=0;
         else {
-            b=x;
-            split(ch[x][0],v,a,ch[b][0]);
+            if(val[x]<=v) a=x,split(ch[x][1],v,ch[a][1],b);
+            else b=x,split(ch[x][0],v,a,ch[b][0]);
+            pushup(x);
         }
-        pushup(x);
     }
 
     int merge(int a,int b){
-        if(!a || !b) return a+b;
-        if(rd[a]<rd[b]){ch[a][1]=merge(ch[a][1],b); pushup(a); return a;}
-        else {ch[b][0]=merge(a,ch[b][0]); pushup(b); return b;}
+        if(!a || !b) return a|b;
+        if(rd[a]<rd[b]){ch[a][1]=merge(ch[a][1],b);pushup(a);return a;}
+        else {ch[b][0]=merge(a,ch[b][0]);pushup(b);return b;}
     }
 
     inline int newNode(int v){
