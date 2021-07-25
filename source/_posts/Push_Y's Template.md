@@ -240,6 +240,52 @@ namespace Treap{
 
 ### fhq-Treap
 
+```cpp
+namespace fhq_Treap{
+
+    int x,y,z,rt,idx,sz[N<<2],ch[N<<2][2],rd[N<<2],val[N<<2];
+
+    inline void pushup(int x){sz[x]=sz[ch[x][0]]+sz[ch[x][1]]+1;}
+
+    void split(int x,int v,int& a,int& b){
+        if(!x){
+            a=b=0;
+            return ;
+        }
+        if(val[x]<=v){
+            a=x;
+            split(ch[x][1],v,ch[a][1],b);
+        }
+        else {
+            b=x;
+            split(ch[x][0],v,a,ch[b][0]);
+        }
+        pushup(x);
+    }
+
+    int merge(int a,int b){
+        if(!a || !b) return a+b;
+        if(rd[a]<rd[b]){ch[a][1]=merge(ch[a][1],b); pushup(a); return a;}
+        else {ch[b][0]=merge(a,ch[b][0]); pushup(b); return b;}
+    }
+
+    inline int newNode(int v){
+        sz[++idx]=1;
+        val[idx]=v;
+        rd[idx]=rand();
+        return idx;
+    }
+
+    inline int kth(int x,int k){
+        while(1){
+            if(k<=sz[ch[x][0]]) x=ch[x][0];
+            else if(k==sz[ch[x][0]]+1) return x;
+            else k-=sz[ch[x][0]]+1,x=ch[x][1];
+        }
+    }
+
+}
+```
 
 ## 字符串
 
