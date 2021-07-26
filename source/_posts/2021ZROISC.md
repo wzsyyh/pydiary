@@ -191,6 +191,61 @@ $f[statu][i][0/1][0/1][bin]$
 
 ## Day 8
 
+https://www.luogu.com.cn/problem/P3350
+
+https://www.luogu.com.cn/problem/SP2371
+
 https://acm.hdu.edu.cn/showproblem.php?pid=6800
 
+https://www.luogu.com.cn/problem/P5163
+
 https://www.luogu.com.cn/problem/CF1365G
+
+## Day 9
+
+各品种平衡树
+
+https://www.luogu.com.cn/problem/P1486
+
+https://www.luogu.com.cn/problem/P2161
+
+https://www.luogu.com.cn/problem/P2521
+
+https://www.luogu.com.cn/problem/P3224
+
+
+## Day 10
+
+可持久化数据结构
+
+### 例题
+
+https://codeforces.com/contest/323/problem/C
+
+https://loj.ac/p/2718
+
+https://loj.ac/p/3048
+
+https://loj.ac/p/2555
+
+https://loj.ac/p/3346
+
+https://www.luogu.com.cn/problem/P2839
+
+http://acm.hdu.edu.cn/showproblem.php?pid=5756
+
+http://acm.hdu.edu.cn/showproblem.php?pid=5118
+
+https://codeforces.com/contest/1340/problem/F
+
+### 课后练习
+
+https://loj.ac/p/2551
+
+https://uoj.ac/problem/29
+
+https://loj.ac/p/2310
+
+https://codeforces.ml/contest/702/problem/F
+
+## Dau 11
