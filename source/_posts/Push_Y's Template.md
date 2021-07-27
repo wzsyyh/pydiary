@@ -342,3 +342,28 @@ struct Manacher{
     }
 }man;
 ```
+
+### 后缀数组
+
+```cpp
+inline bool cmp(int a,int b){return rk[a]==rk[b]?rk[a+ii]<rk[b+ii]:rk[a]<rk[b];}
+void init_sa(char* s){
+    n=strlen(s+1);
+    for(int i=1;i<=n;i++) sa[i]=i,rk[i]=s[i];
+    for(int i=1;i<n;i<<=1){
+        ii=i;        
+        sort(sa+1,sa+n+1,cmp);
+        memcpy(ork,rk,sizeof(rk));
+        for(int j=1,c=0;j<=n;j++){
+            if(ork[sa[j]]==ork[sa[j-1]] && ork[sa[j]+i]==ork[sa[j-1]+i]) rk[sa[j]]=c;
+            else rk[sa[j]]=++c;
+        }
+    }
+    for(int i=1,k=0;i<=n;i++){
+        if(k>0) k--;
+        int j=sa[rk[i]-1];
+        while(j+k<=n && i+k<=n && s[j+k]==s[i+k]) k++;
+        h[rk[i]-1]=k;
+    }
+}
+```
