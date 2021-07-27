@@ -249,3 +249,29 @@ https://loj.ac/p/2310
 https://codeforces.ml/contest/702/problem/F
 
 ## Dau 11
+
+### 例题
+
+https://www.luogu.com.cn/problem/P2408
+
+https://codeforces.ml/contest/1073/problem/G
+
+https://codeforces.ml/contest/232/problem/D
+
+https://codeforces.ml/contest/666/problem/E
+
+https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1770
+
+https://loj.ac/p/2083
+
+https://codeforces.ml/contest/1063/problem/F
+
+课后练习
+
+http://poj.org/problem?id=3581
+
+https://loj.ac/p/2133
+
+https://loj.ac/p/2073
+
+https://loj.ac/p/3326
