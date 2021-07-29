@@ -110,6 +110,8 @@ category: 学习笔记
 
 - 2021.07.12 [[ABC209F] Deforestation](https://atcoder.jp/contests/abc209/tasks/abc209_f) 还是前缀和优化。近阶段其实很多dp优化都是用前缀和优化。
 
+- 2021.07.28 [[CE2003] Minimizing maximizer](http://poj.org/problem?id=1769) 经典线段树维护dp，写法跟线段树维护最长上升子序列很像。
+
 ### [决策单调性/单调队列/斜率优化dp](https://www.cnblogs.com/MashiroSky/p/6009685.html)
 
 - **疑难点**：推柿子；单调队列里 $l$ 与 $r$ 的关系（是 $＜$ 还是$≤$），以后习惯 `l=r=1;q[1]=0;` 并且维护队列部分用 `l<r`。
@@ -272,6 +274,10 @@ while(l<=r){
 - 2021.07.11 [POJ2115 C Looooops](http://poj.org/problem?id=2115) 扩欧。`long long`类型的要用`1ll<<k`，而不是`1<<k`。
 
 - 2021.07.12 [CF1543A Exciting Bets](https://codeforces.com/contest/1543/problem/A) gcd的一个很trivial但不常用的性质吧，gcd(a,b)=gcd(a-b,b)
+
+### 计数dp
+
+- 2021.07.28 [[ARC112E] Cigar Box](https://atcoder.jp/contests/arc112/tasks/arc112_e) 考虑逆推，结合组合数。
 
 ------------
 

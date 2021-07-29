@@ -248,7 +248,7 @@ https://loj.ac/p/2310
 
 https://codeforces.ml/contest/702/problem/F
 
-## Dau 11
+## Day 11
 
 ### 例题
 
@@ -275,3 +275,53 @@ https://loj.ac/p/2133
 https://loj.ac/p/2073
 
 https://loj.ac/p/3326
+
+## Day 12
+
+### 例题
+
+https://www.luogu.com.cn/problem/P1896
+
+https://codeforces.ml/problemset/problem/1238/E
+
+https://www.luogu.com.cn/problem/P4127
+
+https://loj.ac/p/6770
+
+https://www.luogu.com.cn/problem/P1850
+
+https://codeforces.com/gym/101623/problem/E
+
+https://codeforces.ml/problemset/problem/1237/F
+
+https://atcoder.jp/contests/arc112/tasks/arc112_e
+
+http://poj.org/problem?id=1769
+
+https://acm.hdu.edu.cn/showproblem.php?pid=6856
+
+https://codeforces.ml/contest/1322/problem/D
+
+https://www.luogu.com.cn/problem/P3628
+
+https://loj.ac/p/2249
+
+https://acm.hdu.edu.cn/showproblem.php?pid=6065
+
+https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2591
+
+### 课后练习
+
+https://codeforces.ml/contest/1106/problem/E
+
+https://loj.ac/p/2540
+
+https://atcoder.jp/contests/dp/tasks/dp_y
+
+https://atcoder.jp/contests/dp/tasks/dp_w
+
+https://www.luogu.com.cn/problem/P2612
+
+https://www.luogu.com.cn/problem/P4027
+
+## Day 13

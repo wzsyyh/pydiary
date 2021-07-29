@@ -282,6 +282,23 @@ namespace fhq_Treap{
 
 ## 字符串
 
+### 最小表示法
+
+```cpp
+int Min_Show(){
+    int i=0,j=1,k=0;
+    while(k<n && i<n && j<n){
+        if(A[(i+k)%n]==A[(j+k)%n]) k++;
+        else {
+            A[(i+k)%n]>A[(j+k)%n] ? i+=k+1 : j+=k+1 ;
+            if(i==j) i++;
+            k=0;
+        }
+    }
+    return min(i,j);
+}
+```
+
 ### 扩展kmp
 
 ```cpp
