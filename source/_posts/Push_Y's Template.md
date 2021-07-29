@@ -301,6 +301,23 @@ int Min_Show(){
 
 ### 扩展kmp
 
+#### OI-wiki
+
+```cpp
+vector<int> z_function(char* s){
+    int len=n+m+1;
+    vector<int> z(len);
+    for(int i=1,l=0,r=0;i<len;i++){
+        if(i<=r) z[i]=min(r-i+1,z[i-l]);
+        while(i+z[i]<len && s[i+z[i]]==s[z[i]]) z[i]++;
+        if(i+z[i]-1>r) l=i,r=i+z[i]-1;
+    }
+    z[0]=m;
+    return z;
+}
+```
+
+#### 蟹老板
 ```cpp
 struct exkmp{
 
