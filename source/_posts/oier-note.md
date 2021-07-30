@@ -78,7 +78,7 @@ category: 学习笔记
 
 - 2021.07.18 [[POJ3728]The merchant](http://poj.org/problem?id=3728) 树剖写的话要转好几下
 
-#### [长链剖分](/)
+### [长链剖分](/)
 
 ### [cdq分治](/)
 
