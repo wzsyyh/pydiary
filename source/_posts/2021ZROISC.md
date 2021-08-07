@@ -278,6 +278,8 @@ https://loj.ac/p/3326
 
 ## Day 12
 
+Class B **DP**
+
 ### 例题
 
 https://www.luogu.com.cn/problem/P1896
@@ -325,3 +327,91 @@ https://www.luogu.com.cn/problem/P2612
 https://www.luogu.com.cn/problem/P4027
 
 ## Day 13
+
+Class B **字符串**
+
+### 例题
+
+https://acm.hdu.edu.cn/showproblem.php?pid=2609
+
+https://www.luogu.com.cn/problem/P4287
+
+https://www.luogu.com.cn/problem/P5446
+
+https://www.luogu.com.cn/problem/P2375
+
+https://loj.ac/p/3103
+
+https://codeforces.ml/contest/1466/problem/G
+
+https://www.luogu.com.cn/problem/P2414
+
+https://codeforces.com/contest/697/problem/F
+
+http://opentrains.snarknews.info/~ejudge/team.cgi?SID=92517543ff8190b4&action=2&lt=1
+
+几道 NFLS 的题
+
+https://www.luogu.com.cn/problem/P3975
+
+https://loj.ac/p/3326
+
+https://codeforces.ml/contest/700/problem/E
+
+https://ioihw20.duck-ac.cn/problem/261
+
+### 课后习题
+
+https://www.luogu.com.cn/problem/P3181
+
+http://codeforces.ml/contest/666/problem/E
+
+https://loj.ac/p/2720
+
+https://codeforces.ml/problemset/problem/1037/H
+
+https://vjudge.net/problem/TopCoder-10413
+
+https://vjudge.net/problem/CodeChef-DIFTRIP
+
+## Day 14
+
+Class B
+
+一堆数论题
+
+## Day 15
+
+Class B
+
+一堆数学题
+
+## Day 16
+
+Class B
+
+亦可赛艇ACM赛 QwQ
+
+学军的sbb 和 人大附的zxh 也带不动我。。。最终 $2$ 个气球，还不够平分。
+
+## Day 17
+
+Class C **网络流和二分图**
+
+例题大都是 *网络流 24 题* 中的。
+
+## Day 18
+
+Class C **%你赛**
+
+## Day 19
+
+Class C **%你赛**
+
+## Day 20
+
+Class C **区间dp 树形dp**
+
+## Day 21
+
+Class C **状压dp**
