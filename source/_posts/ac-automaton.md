@@ -26,46 +26,46 @@ category: 学习笔记
 
 	记 $tr[p][c]=v$ 表示结点 $v$ 的父结点 $p$ 通过字符 $c$ 指向 $v$ 。
     
-   记 $fail[u]$ 表示 $u$ 的失配指针，即 $u$ 的最长后缀。
+	记 $fail[u]$ 表示 $u$ 的失配指针，即 $u$ 的最长后缀。
    
-   1. 若 $tr[u][i]$ 存在，则 $fail[tr[u][i]]$ 可以由 $fail[u]$ 增加一个字符 $i$ 得到
+	1. 若 $tr[u][i]$ 存在，则 $fail[tr[u][i]]$ 可以由 $fail[u]$ 增加一个字符 $i$ 得到
    
 	1. 否则，直接将 $tr[u][i]$ 指向 $tr[fail[u]][i]$ 的状态 
     
-  ```cpp
-  void build(){
-      for(int i=0;i<26;i++)
-          if(tr[0][i])q.push(tr[0][i]);
-      while(q.size()){
-          int u=q.front();
-          q.pop();
-          for(int i=0;i<26;i++){
-              if(tr[u][i]){
-                  fail[tr[u][i]]=tr[fail[u]][i];
-                  q.push(tr[u][i]);
-              }
-              else tr[u][i]=tr[fail[u]][i];
-          }
-      }
-  }
-  ```
+	```cpp
+	void build(){
+		for(int i=0;i<26;i++)
+			if(tr[0][i])q.push(tr[0][i]);
+		while(q.size()){
+			int u=q.front();
+			q.pop();
+			for(int i=0;i<26;i++){
+				if(tr[u][i]){
+					fail[tr[u][i]]=tr[fail[u]][i];
+					q.push(tr[u][i]);
+				}
+				else tr[u][i]=tr[fail[u]][i];
+			}
+		}
+	}
+	```
 - ### 匹配函数
 
 	以[P3808 【模板】AC自动机（简单版）](https://www.luogu.com.cn/problem/P3808)的要求为例
 
 
-  ```cpp
-  int query(char *s) {
-      int u=0,res=0;
-      for(int i=1;s[i];i++) {
-          u=tr[u][t[i]-'a'];
-          for(int j=u;j && e[j]!=-1;j=fail[j]){
-              res+=e[j],e[j]=-1;
-          }
-      }
-      return res;
-  }
-  ```
+	```cpp
+	int query(char *s) {
+		int u=0,res=0;
+		for(int i=1;s[i];i++) {
+			u=tr[u][t[i]-'a'];
+			for(int j=u;j && e[j]!=-1;j=fail[j]){
+				res+=e[j],e[j]=-1;
+			}
+		}
+		return res;
+	}
+	```
   
 ## 板子
 
