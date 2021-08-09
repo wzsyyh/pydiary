@@ -53,7 +53,6 @@ category: 学习笔记
 
 	以[P3808 【模板】AC自动机（简单版）](https://www.luogu.com.cn/problem/P3808)的要求为例
 
-
 	```cpp
 	int query(char *s) {
 		int u=0,res=0;
@@ -66,7 +65,7 @@ category: 学习笔记
 		return res;
 	}
 	```
-  
+
 ## 板子
 
 [P5357 【模板】AC自动机（二次加强版）](https://www.luogu.com.cn/problem/P5357)
