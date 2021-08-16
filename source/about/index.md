@@ -4,6 +4,8 @@ date: 2021-07-20 21:34:47
 ---
 > 欢迎来到 Push_Y 的博客！
 
+![](https://www.wzsyyh.ml/image/Push_Y.png)
+
 ## 关于本站
 Push_Y 的个人主页！
 
