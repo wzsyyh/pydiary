@@ -26,7 +26,9 @@ category: 学习笔记
 
 2021.08.21 明天新生报道了，要正式开启高中生涯了。
 
-以下专题按 [Push_Y](https://www.luogu.com.cn/user/135485) 复出后接触的时间先后排列
+## 专题
+
+> 以下专题按 [Push_Y](https://www.luogu.com.cn/user/135485) 复出后接触的时间先后排列
 
 ### [基础dp](/)
   
@@ -257,6 +259,12 @@ while(l<=r){
 
 - 2021.07.07 [[ABC206F]Interval Game 2](https://atcoder.jp/contests/abc206/tasks/abc206_f) 第一次写博弈论的题居然还是在VP的时候（~~看了Editorial就AK了~~）
 
+- 2021.08.25 [CF455B A Lot of Games](https://codeforces.com/problemset/problem/455/B)
+
+	- 开始以为就是个 Trie SBT，原来是 SBT 套 SBT。
+	
+	- 给出的 $k$ 自然是有用的，可以故意输掉第 $k-1$ 局来获得后手换来第 $k$ 局的胜利。
+
 ### 数论
 
 - 2021.07.09 [POJ3292 Semi-prime H-numbers](http://poj.org/problem?id=3292) [UVA11105 H-半素数 Semi-prime H-numbers](https://www.luogu.com.cn/problem/UVA11105) 素数、同余
@@ -282,6 +290,12 @@ while(l<=r){
 - 2021.07.28 [[ARC112E] Cigar Box](https://atcoder.jp/contests/arc112/tasks/arc112_e) 考虑逆推，结合组合数。
 
 ------------
+
+## 题单
+
+### XJ提高过关1
+
+CF455B in [博弈论](https://www.wzsyyh.ml/post/oier-note/#%E5%8D%9A%E5%BC%88%E8%AE%BA)
 
 ## [「实时更新」查漏补缺](/)
 
