@@ -70,3 +70,20 @@ Wikipedia 中对**齐肯多夫定理**的描述：
 $n = f_1 + f_2 + ... + f_k$
 
 先手取完最小的那一堆（即 $f_k$）后，根据**齐肯多夫定理**，$f_{k-1} > 2 \times f_k$，于是后手无法一次性取完次小的那一堆。再根据**引理 1**，次小的一堆的最后一块石子一定还是由先手取到，于是先手一定能取到最大的那一堆的最后一块，即整堆石子的最后一块。
+
+### CODE
+
+```cpp
+signed main() {
+    ll n=gin();
+    while(1) {
+        if(n==1) {puts("1"); break;}
+        if(n==2) {puts("2"); break;}
+        ll x=1,y=2,z=3;
+        while(z<n) x=y,y=z,z=x+y;
+        if(z==n) {printf("%lld\n",z); break;}
+        else n-=y;
+    }
+    return 0;
+}
+```
