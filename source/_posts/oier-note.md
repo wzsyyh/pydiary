@@ -293,9 +293,13 @@ while(l<=r){
 
 ## 题单
 
-### XJ提高过关1
+### XJ提高过关
 
 CF455B in [博弈论](https://www.wzsyyh.ml/post/oier-note/#%E5%8D%9A%E5%BC%88%E8%AE%BA)
+
+### BZOJ
+
+[#3705 对称的正方形](https://hydro.ac/d/bzoj/p/3705) 二维哈希+二分
 
 ## [「实时更新」查漏补缺](/)
 

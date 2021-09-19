@@ -1,8 +1,8 @@
 ---
 title: 博弈游戏之——Fibonacci Nim
 date: 2021-09-01 13:31:24
-tag: 题解
-category: 题解
+tag: [题解, 博弈]
+category: [题解, 学习笔记]
 ---
 
 ## 引入
