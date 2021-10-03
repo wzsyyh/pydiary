@@ -105,7 +105,7 @@ T1 https://acm.hdu.edu.cn/showproblem.php?pid=6638 ✔️
 
 T2 https://acm.hdu.edu.cn/showproblem.php?pid=6606 ✔️
 
-T3 https://acm.hdu.edu.cn/showproblem.php?pid=6609
+T3 https://acm.hdu.edu.cn/showproblem.php?pid=6609 ✔️
 
 T4 https://www.luogu.com.cn/problem/CF600E dsu on tree✔️ 线段树合并✖️
 
@@ -113,9 +113,9 @@ T5 https://www.luogu.com.cn/problem/P3521 ✔️吃老本
 
 T6 https://www.luogu.com.cn/problem/P4556 ✔️吃老本
 
-T7 https://codeforces.com/problemset/problem/1181/D
+T7 https://codeforces.com/problemset/problem/1181/D ✔️
 
-T8 https://codeforces.com/problemset/problem/1354/D
+T8 https://codeforces.com/problemset/problem/1354/D ✔️on 2021.10.3
 
 ## Day 5
 
@@ -125,7 +125,7 @@ T1 https://www.luogu.com.cn/problem/CF955D ✔️
 
 T2 https://www.luogu.com.cn/problem/CF985F ✔️
 
-T3 https://darkbzoj.tk/problem/2462
+T3 https://darkbzoj.tk/problem/2462 ✔️on 2021.10.3
 
 T4 https://www.luogu.com.cn/problem/UVA1519
 
