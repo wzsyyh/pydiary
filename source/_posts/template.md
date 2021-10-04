@@ -369,7 +369,7 @@ struct Manacher{
         for(int i=0;i<n;i++){
             if(i<r) f[i]=min(f[2*p-i],r-i);
             else f[i]=1;
-            while(0<=i-f[i] && i+f[i]<n && a[i-f[i]]==a[i+f[i]]) f[i]++;
+            while(0<i-f[i] && i+f[i]<n && a[i-f[i]]==a[i+f[i]]) f[i]++;
             if(i+f[i]-1>r) r=i+f[i]-1,p=i;
         }
         for(int i=0;i<n;i++) f[i]--;

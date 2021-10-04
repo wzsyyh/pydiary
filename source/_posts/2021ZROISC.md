@@ -127,11 +127,11 @@ T2 https://www.luogu.com.cn/problem/CF985F ✔️
 
 T3 https://darkbzoj.tk/problem/2462 ✔️on 2021.10.3
 
-T4 https://www.luogu.com.cn/problem/UVA1519
+T4 https://www.luogu.com.cn/problem/UVA1519 ✔️on 2021.10.3
 
 T5 https://www.luogu.com.cn/problem/P4052 ✔️
 
-T6 https://vjudge.net/problem/HihoCoder-1877 hihocoder
+T6 https://vjudge.net/problem/HihoCoder-1877 hihocoder ✔️on 2021.10.3（这个OJ似乎爆了交不了）
 
 T7 https://acm.hdu.edu.cn/showproblem.php?pid=3336 ✔️
 
@@ -143,7 +143,7 @@ T10 http://poj.org/problem?id=2752 ✔️
 
 T11 https://www.luogu.com.cn/problem/P2375 ✔️吃老本
 
-T12 https://www.luogu.com.cn/problem/P4600
+T12 https://www.luogu.com.cn/problem/P4600 ✔️
 
 ## Day 6
 
@@ -151,9 +151,9 @@ T12 https://www.luogu.com.cn/problem/P4600
 
 扩展kmp
 
-T1 https://acm.hdu.edu.cn/showproblem.php?pid=2594
+T1 https://acm.hdu.edu.cn/showproblem.php?pid=2594 ✔️
 
-T2 https://acm.hdu.edu.cn/showproblem.php?pid=6629
+T2 https://acm.hdu.edu.cn/showproblem.php?pid=6629 ✔️
 
 马拉车拉马
 
