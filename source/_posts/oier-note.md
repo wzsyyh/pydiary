@@ -28,6 +28,8 @@ category: 学习笔记
 
 2021.09.24 ~~晚上20:21野狐5段了~~
 
+2021.10.06 将目标中的 p 改回了 t 。
+
 ## 专题
 
 > 以下专题按 [Push_Y](https://www.luogu.com.cn/user/135485) 复出后接触的时间先后排列
@@ -310,3 +312,13 @@ CF455B in [博弈论](https://www.wzsyyh.ml/post/oier-note/#%E5%8D%9A%E5%BC%88%E
 - 2021.03.16 准备系统学字符串算法
 
 - 2021.03.17 老惨了发现虚树已经忘了无数遍了。。。[板子集合](https://www.luogu.com.cn/blog/wzsyyh/banzi)
+
+## 成就
+
+- 2021.10.06 由于 ss 催更，更一发吧。
+
+![](/image/20211006ss.png)
+
+![](/image/the-first-time-to-get-rk1.png)
+
+也挺惊喜的其实。
