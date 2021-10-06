@@ -191,9 +191,9 @@ $f[statu][i][0/1][0/1][bin]$
 
 ## Day 8
 
-https://www.luogu.com.cn/problem/P3350
+https://www.luogu.com.cn/problem/P3350 ✔️on 2021.10.6
 
-https://www.luogu.com.cn/problem/SP2371
+https://www.luogu.com.cn/problem/SP2371 ✔️
 
 https://acm.hdu.edu.cn/showproblem.php?pid=6800
 
@@ -205,7 +205,7 @@ https://www.luogu.com.cn/problem/CF1365G
 
 各品种平衡树
 
-https://www.luogu.com.cn/problem/P1486
+https://www.luogu.com.cn/problem/P1486 ✔️
 
 https://www.luogu.com.cn/problem/P2161
 
