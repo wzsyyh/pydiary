@@ -207,7 +207,7 @@ https://www.luogu.com.cn/problem/CF1365G
 
 https://www.luogu.com.cn/problem/P1486 ✔️
 
-https://www.luogu.com.cn/problem/P2161
+https://www.luogu.com.cn/problem/P2161 ✔️on 2021.10.7
 
 https://www.luogu.com.cn/problem/P2521
 

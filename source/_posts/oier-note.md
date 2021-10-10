@@ -321,4 +321,4 @@ CF455B in [博弈论](https://www.wzsyyh.ml/post/oier-note/#%E5%8D%9A%E5%BC%88%E
 
 ![](/image/the-first-time-to-get-rk1.png)
 
-也挺惊喜的其实。
+第一次也挺惊喜的其实。
