@@ -10,29 +10,29 @@ category: 学习笔记
 
 先以经典题[P2900 [USACO08MAR]Land Acquisition G/土地购买](https://www.luogu.com.cn/problem/P2900)为例。
 
-$$f[i]=\min\{f[j]+y[j+1]*x[i]\}$$
+$$f[i]=\min\{f[j]+y[j+1] \times x[i]\}$$
 
 用 $g[i]$ 表示转移到 $f[i]$ 最优的决策点，证明 $g[i]<=g[i+1]$ ：
 
 根据 $g[i]$ 的定义，相当于已知了（下面 $j$ 为任意决策点）
 
-$$f[g[i]]+y[g[i]+1]*x[i]≤[j]+y[j+1]*x[i]$$
+$$f[g[i]]+y[g[i]+1] \times x[i]≤[j]+y[j+1] \times x[i]$$
 
 那等价于证明：
 
-$$f[g[i]]+y[g[i]+1]*x[i+1]≤f[j]+y[j+1]*x[i+1]\ \ \ \ (j≤g[i])$$
+$$f[g[i]]+y[g[i]+1] \times x[i+1]≤f[j]+y[j+1]\times x[i+1]\ \ \ \ (j≤g[i])$$
 
 利用已知：
 
-$f[g[i]]+y[g[i]+1]*x[i+1]+y[g[i]+1]*(x[i]-x[i+1])≤f[j]+y[j+1]*x[i+1]+y[j+1]*(x[i]-x[i+1])$
+$f[g[i]]+y[g[i]+1] \times x[i+1]+y[g[i]+1] \times (x[i]-x[i+1])≤f[j]+y[j+1] \times x[i+1]+y[j+1] \times (x[i]-x[i+1])$
 
 $∵j≤g[i]\ ∴y[g[i]+1]≤y[j+1]$
 
 $∵x[i]<x[i+1]\ ∴x[i]-x[i+1]<0$
 
-$∴y[g[i]+1]*(x[i]-x[i+1])≥y[j+1]*(x[i]-x[i+1])$
+$∴y[g[i]+1] \times (x[i]-x[i+1])≥y[j+1] \times (x[i]-x[i+1])$
 
-$∴f[g[i]]+y[g[i]+1]*x[i]<=f[j]+y[j+1]*x[i]$
+$∴f[g[i]]+y[g[i]+1] \times x[i]<=f[j]+y[j+1] \times x[i]$ 
 
 ### 2D1D和1D1D
 
