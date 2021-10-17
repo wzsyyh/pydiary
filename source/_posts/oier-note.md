@@ -120,6 +120,10 @@ category: 学习笔记
 
 - 2021.07.28 [[CE2003] Minimizing maximizer](http://poj.org/problem?id=1769) 经典线段树维护dp，写法跟线段树维护最长上升子序列很像。
 
+> bitset优化！
+
+- 2021.10.14 [[zr联赛集训day3]史上第三简洁的题面](http://www.zhengruioi.com/problem/2018) 或许是第一次遇到bitset优化dp。能用bitset优化的原则应当是状态全都是bool型。
+
 ### [决策单调性/单调队列/斜率优化dp](https://www.cnblogs.com/MashiroSky/p/6009685.html)
 
 - **疑难点**：推柿子；单调队列里 $l$ 与 $r$ 的关系（是 $＜$ 还是$≤$），以后习惯 `l=r=1;q[1]=0;` 并且维护队列部分用 `l<r`。
@@ -322,3 +326,19 @@ CF455B in [博弈论](https://www.wzsyyh.ml/post/oier-note/#%E5%8D%9A%E5%BC%88%E
 ![](/image/the-first-time-to-get-rk1.png)
 
 第一次也挺惊喜的其实。
+
+## 一些题
+
+### 2020tg10
+
+*day1*
+
+A. 把 $n$ 划分成尽量少的数字之和，每个数都形如 $3k^3 - 3k +1 (k\ge 1)$。
+
+B. 求给定字符串中 $AA^rA$ 串的数量（其中 $A^r$ 表示 $A$ 的反串）。
+
+*Tutorial*
+
+A. mod 3 之后是结论题。
+
+B. 先 Manacher，再在树状数组中找满足 $i-man_i \le j$ 的 $j$ 的数量，再把 $i$ 加入到树状数组中。
