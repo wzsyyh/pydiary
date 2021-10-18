@@ -327,7 +327,23 @@ CF455B in [博弈论](https://www.wzsyyh.ml/post/oier-note/#%E5%8D%9A%E5%BC%88%E
 
 ![](/image/the-first-time-to-get-rk1.png)
 
-第一次也挺惊喜的其实。
+第一次拿榜1也挺惊喜的其实。
+
+- 2021.10.17
+
+![](/image/20211017.png)
+
+第二次拿榜一也挺惊喜的其实。
+
+- 2021.10.18
+
+惊喜的发现：
+
+![](/image/20211018rank2.png)
+
+然而：
+
+![](/image/20211018zr.png)
 
 ## 一些题
 
