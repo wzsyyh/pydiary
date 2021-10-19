@@ -313,6 +313,10 @@ CF455B in [博弈论](https://www.wzsyyh.ml/post/oier-note/#%E5%8D%9A%E5%BC%88%E
 
 [#3705 对称的正方形](https://hydro.ac/d/bzoj/p/3705) 二维哈希+二分
 
+### 国家集训队作业
+
+[Link](https://www.wzsyyh.ml/post/team_homework/)
+
 ### 思维题
 
 #### 太巧秒了系列
