@@ -230,7 +230,7 @@ LaTeX语法这里不做解释，本主题中，单dollar符号包围的为行内
     ```
   - Hexo 内置标签系统-图片标签（显示图片标题）
     ```
-    {% img [class names] /path/to/image [width] [height] '"alt text" "title text"' %}
+    {%  [class names] /path/to/image [width] [height] '"alt text" "title text"' %}
     ```
 所以如果你仅仅想方便快捷引入图片，那你应该使用 GFM 语法，这种方式也是兼容性最好的方案。
 
