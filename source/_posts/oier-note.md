@@ -1,7 +1,7 @@
 ---
 title: OI日志
 date: 2021-01-31 16:23:26
-tag: 
+tag: 学习笔记
 category: 学习笔记
 ---
 **[view in Push_Y's blog](https://www.wzsyyh.ml/post/OI-note/)**
@@ -31,6 +31,8 @@ category: 学习笔记
 2021.10.06 将目标中的 p 改回了 t 。
 
 2021.10.16 第一次尝试咖啡，准备在一周后的csp考场上使用。
+
+2021.10.19 **传6个参数的merge函数会编译错误！！！**
 
 ## 专题
 
