@@ -16,7 +16,7 @@ category: 学习笔记
 
 于是得到了：
 
-![](\image\CF504E.png)
+![](/image/CF504E.png)
 
 ~~就这？~~ 就这样我创建了这个页面。
 
