@@ -232,7 +232,6 @@ LaTeX语法这里不做解释，本主题中，单dollar符号包围的为行内
     ```
     {% img [class names] /path/to/image [width] [height] '"alt text" "title text"' %}
     ```
-    
 所以如果你仅仅想方便快捷引入图片，那你应该使用 GFM 语法，这种方式也是兼容性最好的方案。
 
 但如果你需要显示**图片标题**，你就应该使用第二种方案，**图片标签方式**。
