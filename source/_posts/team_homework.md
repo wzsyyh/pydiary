@@ -11,7 +11,7 @@ category: 学习笔记
 
 ### [CF504E Misha and LCP on Tree](https://codeforces.com/problemset/problem/504/E)
 
-*AC on 2021.10.19 [CODE](/code/#CF504E)*
+*AC on 2021.10.19 [CODE](/post/code/#CF504E)*
 
 看道题就想到树链剖分，结合一下哈希，联系一下二分。
 好像也是第一次写双模数哈希（因为Codeforces卡`unsigned`来着）。
