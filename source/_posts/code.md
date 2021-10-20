@@ -137,3 +137,52 @@ signed main() {
     return 0;
 }
 ```
+
+### CF547D
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+typedef pair<int,int> pi;
+typedef long long ll;
+inline int gin() {
+    int s=0,f=1;
+    char c=getchar();
+    while(c<'0' || c>'9') {
+        if(c=='-') f=-1;
+        c=getchar();
+    }
+    while(c>='0'&&c<='9') {
+        s=(s<<3)+(s<<1)+(c^48);
+        c=getchar();
+    }
+    return s*f;
+}
+
+const int N=2e5+5;
+int n,prex[N],prey[N],col[N];
+vector<int> g[N];
+
+void dfs(int u) {
+    for(int v:g[u]) if(col[v]==-1) col[v]=!col[u],dfs(v);
+}
+
+signed main() {
+    #ifndef ONLINE_JUDGE
+    freopen("test.in","r",stdin);
+    freopen("test.out","w",stdout);
+    #endif
+    n=gin();
+    for(int i=1;i<=n;i++) {
+        int x=gin(),y=gin();
+        col[i]=-1;
+        if(!prex[x]) prex[x]=i;
+        else g[prex[x]].push_back(i),g[i].push_back(prex[x]),prex[x]=0;
+        if(!prey[y]) prey[y]=i;
+        else g[prey[y]].push_back(i),g[i].push_back(prey[y]),prey[y]=0;
+    }
+    for(int i=1;i<=n;i++) if(col[i]==-1) col[i]=0,dfs(i);
+    for(int i=1;i<=n;i++) putchar(col[i]?'b':'r');
+    return 0;
+}
+```
