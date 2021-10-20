@@ -186,3 +186,67 @@ signed main() {
     return 0;
 }
 ```
+
+### CF527E
+
+```cpp
+#include <bits/stdc++.h>
+#define int long long
+using namespace std;
+typedef pair<int,int> pi;
+typedef long long ll;
+inline int gin() {
+    int s=0,f=1;
+    char c=getchar();
+    while(c<'0' || c>'9') {
+        if(c=='-') f=-1;
+        c=getchar();
+    }
+    while(c>='0'&&c<='9') {
+        s=(s<<3)+(s<<1)+(c^48);
+        c=getchar();
+    }
+    return s*f;
+}
+
+const int N=1e5+5,M=3e5+5;
+int n,m,st[N],top,num,e[M<<1],el;
+int tot=1,head[N],to[M<<1],ne[M<<1],fr[M<<1],ind[N];
+bool tag[N],vis[M];
+
+inline void add(int u,int v) {to[++tot]=v,fr[tot]=u,ind[v]++,ne[tot]=head[u],head[u]=tot;}
+
+void dfs(int u) {
+    for(int& i=head[u];i;i=ne[i]) {
+        int v=to[i],j=i>>1;
+        if(vis[j]) continue;
+        vis[j]=1;
+        int k=i;
+        dfs(v);
+        e[++el]=k;
+    }
+}
+
+signed main() {
+    #ifndef ONLINE_JUDGE
+    freopen("test.in","r",stdin);
+    freopen("test.out","w",stdout);
+    #endif
+    n=gin(),m=gin();
+    for(int i=1;i<=m;i++) {
+        int u=gin(),v=gin();
+        add(u,v),add(v,u);
+    }
+    for(int i=1;i<=n;i++) if(ind[i]&1) st[++top]=i;
+    for(int i=1;i<top;i+=2) add(st[i],st[i+1]),add(st[i+1],st[i]);
+    int len=m+top/2;
+    if(len&1) add(1,1),add(1,1),len++;
+    dfs(1);
+    printf("%lld\n",len);
+    for(int i=1;i<=el;i++) {
+        int j=e[i]^((++num)&1);
+        printf("%lld %lld\n",fr[j],to[j]);
+    }
+    return 0;
+}
+```
