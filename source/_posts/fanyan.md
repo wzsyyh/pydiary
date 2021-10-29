@@ -111,9 +111,9 @@ $$f(x,y) = \sum_{i=x}^{n} \sum_{j=y}^{n} \binom{i}{x} \binom{j}{y} g(i,j)$$
 
 $$
 \begin{aligned}
-    f(i,j) &= \binom{n}{i} \binom{n}{j} 3 \cdot 3^{(n-i)(n-j)} &(i,j \neq 0) \\
-    f(i,0) &= \binom{n}{i} 3^i \cdot 3^{n(n-i)} &(i \neq 0, j = 0) \\
-    f(0,0) &= 3^{n^2} &(i,j = 0) \\
+    f(i,j) &= \binom{n}{i} \binom{n}{j} 3 \cdot 3^{(n-i)(n-j)} &(i,j \neq 0) \\\\
+    f(i,0) &= \binom{n}{i} 3^i \cdot 3^{n(n-i)} &(i \neq 0, j = 0) \\\\
+    f(0,0) &= 3^{n^2} &(i,j = 0) \\\\
 \end{aligned}
 $$
 
@@ -127,9 +127,9 @@ $$g(0,0) = \sum_{i=0}^{n} \sum_{j=0}^{n} (-1)^{i+j} f(i,j) $$
 
 $$
 \begin{aligned}
-    &= \sum_{i=1}^{n} \sum_{j=1}^{n} (-1)^{i+j} \binom{n}{i} \binom{n}{j} 3 \cdot 3^{(n-i)(n-j)} \\
-    &= 3^{n^2 + 1} \sum_{i=1}^{n} \sum_{j=1}^{n} (-1)^{i+j} \binom{n}{i} \binom{n}{j} 3^{-in-jn+ij} \\
-    &= 3^{n^2 + 1} \sum_{i=1}^{n} \binom{n}{i} (-1)^i 3^{-in} \sum_{j=1}^{n} \binom{n}{j} (-1)^j 3^{-jn} \cdot 3^{ij} \\
+    &= \sum_{i=1}^{n} \sum_{j=1}^{n} (-1)^{i+j} \binom{n}{i} \binom{n}{j} 3 \cdot 3^{(n-i)(n-j)} \\\\
+    &= 3^{n^2 + 1} \sum_{i=1}^{n} \sum_{j=1}^{n} (-1)^{i+j} \binom{n}{i} \binom{n}{j} 3^{-in-jn+ij} \\\\
+    &= 3^{n^2 + 1} \sum_{i=1}^{n} \binom{n}{i} (-1)^i 3^{-in} \sum_{j=1}^{n} \binom{n}{j} (-1)^j 3^{-jn} \cdot 3^{ij} \\\\
 \end{aligned}
 $$
 
@@ -137,9 +137,9 @@ $$
 
 $$
 \begin{aligned}
-    \sum_{j=1}^{n} \binom{n}{j} (-1)^j 3^{-jn} \cdot 3^{ij} &= \sum_{j=1}^{n} \binom{n}{j} (-1)^j 3^{j(i-n)} \\
-    &= \sum_{j=1}^{n} \binom{n}{j} 1^{n-j} (-3^{i-n})^j \\
-    &= (1-3^{i-n})^n - 1 \\
+    \sum_{j=1}^{n} \binom{n}{j} (-1)^j 3^{-jn} \cdot 3^{ij} &= \sum_{j=1}^{n} \binom{n}{j} (-1)^j 3^{j(i-n)} \\\\
+    &= \sum_{j=1}^{n} \binom{n}{j} 1^{n-j} (-3^{i-n})^j \\\\
+    &= (1-3^{i-n})^n - 1 \\\\
 \end{aligned}
 $$
 
