@@ -250,3 +250,375 @@ signed main() {
     return 0;
 }
 ```
+
+### BZOJ2839
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+inline int gin() {
+    int s=0,f=1;
+    char c=getchar();
+    while(c<'0' || c>'9') {
+        if(c=='-') f=-1;
+        c=getchar();
+    }
+    while(c>='0'&&c<='9') {
+        s=(s<<3)+(s<<1)+(c&15);
+        c=getchar();
+    }
+    return s*f;
+}
+
+const int N=1e6+5,mod=1e9+7;
+int inv[N],fact[N],finv[N];
+
+void init() {
+    inv[1]=1;
+    for(int i=2;i<=1e6;i++) inv[i]=1ll*(mod-mod/i)*inv[mod%i]%mod;
+    fact[0]=finv[0]=1;
+    for(int i=1;i<=1e6;i++) {
+        fact[i]=1ll*fact[i-1]*i%mod;
+        finv[i]=1ll*finv[i-1]*inv[i]%mod;
+    }
+}
+
+int C(int n,int m) {
+    if(m<0 || m>n) return 0;
+    return 1ll*fact[n]*finv[m]%mod*finv[n-m]%mod;
+}
+
+int qpow(int a,int b,int mod) {
+    int res=1;
+    while(b) {
+        if(b&1) res=1ll*res*a%mod;
+        a=1ll*a*a%mod;
+        b>>=1;
+    }
+    return res;
+}
+
+signed main() {
+    init();
+    int n=gin(),k=gin(),ans=0;
+    for(int i=k;i<=n;i++) {
+        ans=(ans+1ll*((i-k)%2?-1:1)*C(i,k)*C(n,i)%mod*(qpow(2,qpow(2,n-i,mod-1),mod))%mod)%mod;
+    }
+    printf("%d\n",(ans+mod)%mod);
+    return 0;
+}
+```
+
+### gym101933K
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+typedef pair<int,int> pi;
+typedef long long ll;
+inline int gin() {
+    int s=0,f=1;
+    char c=getchar();
+    while(c<'0' || c>'9') {
+        if(c=='-') f=-1;
+        c=getchar();
+    }
+    while(c>='0'&&c<='9') {
+        s=(s<<3)+(s<<1)+(c^48);
+        c=getchar();
+    }
+    return s*f;
+}
+
+const int N=2505,mod=1e9+7;
+int n,k,inv[N],fact[N],finv[N],ans;
+
+void init() {
+    inv[1]=1;
+    for(int i=2;i<=2500;i++) inv[i]=1ll*(mod-mod/i)*inv[mod%i]%mod;
+    fact[0]=finv[0]=1;
+    for(int i=1;i<=2500;i++) {
+        fact[i]=1ll*fact[i-1]*i%mod;
+        finv[i]=1ll*finv[i-1]*inv[i]%mod;
+    }
+}
+
+int C(int n,int m) {
+    if(m<0 || m>n) return 0;
+    return 1ll*fact[n]*finv[m]%mod*finv[n-m]%mod;
+}
+
+int qpow(int a,int b) {
+    int res=1;
+    while(b) {
+        if(b&1) res=1ll*res*a%mod;
+        a=1ll*a*a%mod;
+        b>>=1;
+    }
+    return res;
+}
+
+signed main() {
+    #ifndef ONLINE_JUDGE
+    freopen("test.in","r",stdin);
+    freopen("test.out","w",stdout);
+    #endif
+    init();
+    n=gin(),k=gin();
+    for(int i=1;i<n;i++) gin();
+    for(int i=1;i<=k;i++)
+        ans=(ans+1ll*((i-k)%2?-1:1)*C(k,i)*i%mod*qpow(i-1,n-1)%mod+mod)%mod;
+    printf("%d\n",ans);
+    return 0;
+}
+```
+
+### BZOJ4710
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+typedef pair<int,int> pi;
+typedef long long ll;
+inline int gin() {
+    int s=0,f=1;
+    char c=getchar();
+    while(c<'0' || c>'9') {
+        if(c=='-') f=-1;
+        c=getchar();
+    }
+    while(c>='0'&&c<='9') {
+        s=(s<<3)+(s<<1)+(c^48);
+        c=getchar();
+    }
+    return s*f;
+}
+
+const int N=2005,mod=1e9+7;
+int a[N],f[N];
+int inv[N],fact[N],finv[N];
+
+void init() {
+    inv[1]=1;
+    for(int i=2;i<=2000;i++) inv[i]=1ll*(mod-mod/i)*inv[mod%i]%mod;
+    fact[0]=finv[0]=1;
+    for(int i=1;i<=2000;i++) {
+        fact[i]=1ll*fact[i-1]*i%mod;
+        finv[i]=1ll*finv[i-1]*inv[i]%mod;
+    }
+}
+
+int C(int n,int m) {
+    if(m<0 || m>n) return 0;
+    return 1ll*fact[n]*finv[m]%mod*finv[n-m]%mod;
+}
+
+signed main() {
+    #ifndef ONLINE_JUDGE
+    freopen("test.in","r",stdin);
+    freopen("test.out","w",stdout);
+    #endif
+    init();
+    int n=gin(),m=gin();
+    for(int i=1;i<=m;i++) a[i]=gin();
+    for(int i=0;i<n;i++) {
+        f[i]=C(n,i);
+        // printf("%d ",f[i]);
+        for(int j=1;j<=m;j++) f[i]=1ll*f[i]*C(a[j]+n-i-1,n-i-1)%mod;
+        // printf("%d\n",f[i]);
+    }
+    int ans=0;
+    for(int i=0;i<n;i++) ans=(ans+(i%2?-1:1)*f[i])%mod;
+    printf("%d\n",(ans+mod)%mod);
+    return 0;
+}
+```
+
+### BZOJ4487
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+typedef pair<int,int> pi;
+typedef long long ll;
+inline int gin() {
+    int s=0,f=1;
+    char c=getchar();
+    while(c<'0' || c>'9') {
+        if(c=='-') f=-1;
+        c=getchar();
+    }
+    while(c>='0'&&c<='9') {
+        s=(s<<3)+(s<<1)+(c^48);
+        c=getchar();
+    }
+    return s*f;
+}
+
+const int N=405,mod=1e9+7;
+int n,m,c,bin[N*N],ans;
+int inv[N],fact[N],finv[N];
+
+void init() {
+    inv[1]=1;
+    for(int i=2;i<=400;i++) inv[i]=1ll*(mod-mod/i)*inv[mod%i]%mod;
+    fact[0]=finv[0]=1;
+    for(int i=1;i<=400;i++) {
+        fact[i]=1ll*fact[i-1]*i%mod;
+        finv[i]=1ll*finv[i-1]*inv[i]%mod;
+    }
+}
+
+int C(int n,int m) {
+    if(m<0 || m>n) return 0;
+    return 1ll*fact[n]*finv[m]%mod*finv[n-m]%mod;
+}
+
+signed main() {
+    #ifndef ONLINE_JUDGE
+    freopen("test.in","r",stdin);
+    freopen("test.out","w",stdout);
+    #endif
+    init();
+    n=gin(),m=gin(),c=gin();
+    for(int k=0;k<=c;k++) {
+        bin[0]=1;
+        for(int i=1;i<=n*m;i++) bin[i]=1ll*bin[i-1]*(c-k+1)%mod;
+        for(int i=0;i<=n;i++) for(int j=0;j<=m;j++)
+            ans=(ans+1ll*((i+j+k)&1?(mod-1):1)*C(n,i)%mod*C(m,j)%mod*C(c,k)%mod*bin[(n-i)*(m-j)]%mod)%mod;
+    }
+    printf("%d\n",ans);
+    return 0;
+}
+```
+
+### CF1228E
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+typedef pair<int,int> pi;
+typedef long long ll;
+inline int gin() {
+    int s=0,f=1;
+    char c=getchar();
+    while(c<'0' || c>'9') {
+        if(c=='-') f=-1;
+        c=getchar();
+    }
+    while(c>='0'&&c<='9') {
+        s=(s<<3)+(s<<1)+(c^48);
+        c=getchar();
+    }
+    return s*f;
+}
+
+const int N=255,mod=1e9+7;
+int n,k,bin[N*N],bin1[N*N],ans;
+int inv[N],fact[N],finv[N];
+
+void init() {
+    inv[1]=1;
+    for(int i=2;i<=250;i++) inv[i]=1ll*(mod-mod/i)*inv[mod%i]%mod;
+    fact[0]=finv[0]=1;
+    for(int i=1;i<=250;i++) {
+        fact[i]=1ll*fact[i-1]*i%mod;
+        finv[i]=1ll*finv[i-1]*inv[i]%mod;
+    }
+}
+
+int C(int n,int m) {
+    if(m<0 || m>n) return 0;
+    return 1ll*fact[n]*finv[m]%mod*finv[n-m]%mod;
+}
+
+int qpow(int a,int b) {
+    int res=1;
+    while(b) {
+        if(b&1) res=1ll*res*a%mod;
+        a=1ll*a*a%mod;
+        b>>=1;
+    }
+    return res;
+}
+
+signed main() {
+    #ifndef ONLINE_JUDGE
+    freopen("test.in","r",stdin);
+    freopen("test.out","w",stdout);
+    #endif
+    init();
+    n=gin(),k=gin();
+    for(int i=0;i<=n;i++) for(int j=0;j<=n;j++)
+        (ans+=1ll*((i+j)&1?(mod-1):1)*C(n,i)%mod*C(n,j)%mod*qpow(k,(n-i)*(n-j))%mod*qpow(k-1,n*n-(n-i)*(n-j))%mod)%=mod;
+    printf("%d\n",ans);
+    return 0;
+}
+```
+
+### CF997C
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+typedef pair<int,int> pi;
+typedef long long ll;
+inline int gin() {
+    int s=0,f=1;
+    char c=getchar();
+    while(c<'0' || c>'9') {
+        if(c=='-') f=-1;
+        c=getchar();
+    }
+    while(c>='0'&&c<='9') {
+        s=(s<<3)+(s<<1)+(c^48);
+        c=getchar();
+    }
+    return s*f;
+}
+
+const int N=1e6+5,mod=998244353;
+int n,ans;
+int inv[N],fact[N],finv[N];
+
+void init() {
+    inv[1]=1;
+    for(int i=2;i<=1e6;i++) inv[i]=1ll*(mod-mod/i)*inv[mod%i]%mod;
+    fact[0]=finv[0]=1;
+    for(int i=1;i<=1e6;i++) {
+        fact[i]=1ll*fact[i-1]*i%mod;
+        finv[i]=1ll*finv[i-1]*inv[i]%mod;
+    }
+}
+
+int C(int n,int m) {
+    if(m<0 || m>n) return 0;
+    return 1ll*fact[n]*finv[m]%mod*finv[n-m]%mod;
+}
+
+int qpow(int a,int b) {
+    int res=1;
+    while(b) {
+        if(b&1) res=1ll*res*a%mod;
+        a=1ll*a*a%mod;
+        b>>=1;
+    }
+    return res;
+}
+
+signed main() {
+    #ifndef ONLINE_JUDGE
+    freopen("test.in","r",stdin);
+    freopen("test.out","w",stdout);
+    #endif
+    init();
+    n=gin();
+    for(int i=1;i<=n;i++)
+        (ans+=1ll*((i&1)?(mod-1):1)*C(n,i)%mod*qpow(3,1ll*(mod-1-i)*n%(mod-1))%mod*(qpow((1-qpow(3,i-n+mod-1)+mod)%mod,n)-1+mod)%mod)%=mod;
+    ans=1ll*ans*qpow(3,(1ll*n*n+1)%(mod-1))%mod;
+    // printf("%d\n",(ans+mod)%mod);
+    (ans+=2ll*qpow(3,1ll*n*n%(mod-1))%mod*(qpow(1-qpow(3,(1-n+mod-1)%(mod-1)),n)-1)%mod)%=mod;
+    printf("%d\n",(mod-ans)%mod);
+    return 0;
+}
+```
