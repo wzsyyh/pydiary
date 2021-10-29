@@ -1,6 +1,6 @@
 ---
 title: 「学习笔记」 二项式反演
-date: 2021-10-19 15:00:16
+date: 2021-10-28 21:30:16
 tag: 学习笔记
 category: 学习笔记
 ---
@@ -11,11 +11,11 @@ category: 学习笔记
 
 ## 基本形式
 
-$g_k$ 表示恰好有 $k$ 个满足条件 $S$。
+$g(k)$ 表示恰好有 $k$ 个满足条件 $S$。
 
 ### 形式一：“至少形式”
 
-$f_k$ 表示至少有 $k$ 个满足条件 $S$。
+$f(k)$ 表示至少有 $k$ 个满足条件 $S$。
 
 说是至少其实是因为很多人这么称呼（周神讲课的时候也这么说）。实际上不应当把 $f_k$ 理解为“至少 $k$ 个满足条件 $S$ ”，**而应该理解为“钦定 $k$ 个满足条件 $S$ ，剩下的放任自流”。**
 
@@ -23,7 +23,7 @@ $$f(k) = \sum_{i=k}^{n}{ \binom{i}{k} {g(i)} } \iff g(k) = \sum_{i=k}^{n} (-1)^{
 
 ### 形式二：“至多形式”
 
-$f_k$ 表示至多有 $k$ 个满足条件 $S$。
+$f(k)$ 表示至多有 $k$ 个满足条件 $S$。
 
 同样的这并不应当理解成“至多”。
 
@@ -35,7 +35,9 @@ $$f(k) = \sum_{i=m}^{k}{ \binom{k}{i} {g(i)} } \iff g(k) = \sum_{i=m}^{k} (-1)^{
 
 ## 例题
 
-> 类型1：套式子
+感觉周神给的题目顺序是有在分几种题型的，自己也稍微给题目分了下类。
+
+> 类型1：纯套式子题
 
 ### [[BZOJ2839]集合计数](https://hydro.ac/d/bzoj/p/2839)
 
@@ -49,7 +51,7 @@ $$\binom{n}{k} (2^{2^{n-k}}-1) = f(k) = \sum_{i=k}^{n} \binom{i}{k}{g(i)}$$
 
 *AC on 2021.10.28 [CODE](/post/code/#gym101933K)*
 
-$n$ 个点的树填 $k$ 种不同的颜色，要求没有相邻两点颜色相同。
+题意：$n$ 个点的树填 $k$ 种不同的颜色，求没有相邻两点颜色相同的方案数。
 
 $$k \cdot (k-1)^{n-1} = f(k) = \sum_{i=1}^{k} \binom{k}{i} g(i)$$
 
@@ -59,13 +61,13 @@ $$k \cdot (k-1)^{n-1} = f(k) = \sum_{i=1}^{k} \binom{k}{i} g(i)$$
 
 $$\binom{n}{k} \prod_{i=1}^{m} \binom{a[i]+n-k-1}{n-k-1} = f(k) = \sum_{i=k}{n} \binom{i}{k} g(i)$$
 
-> 类型2：求补集
+> 类型2：求反面再套式子题
 
 ### [BZOJ4487 染色问题](https://hydro.ac/d/bzoj/p/4487)
 
 *AC on 2021.10.28 [CODE](/post/code/#BZOJ4487)*
 
-$n \times m$ 的矩形，填 $c$ 种不同的颜色，要求每行每列都有颜色。
+题意：$n \times m$ 的矩形，填 $c$ 种不同的颜色，求每行每列都有颜色的方案数。
 
 $f(i,j,k)$ 表示钦定 $i$ 行 $j$ 列一个都没染且钦定 $k$ 种颜色未使用。（即**至少形式**）
 
@@ -81,7 +83,7 @@ $$f(x,y,z) = \sum_{i=x}^{n} \sum_{j=y}^{m} \sum_{k=z}^{c} \binom{i}{x} \binom{j}
 
 *AC on 2021.10.28 [CODE](/post/code/#CF1228E)*
 
-$n \times n$ 的方格纸，$k$ 种数字，要求每行、每列最小值均为 $1$。
+题意：$n \times n$ 的方格纸，$k$ 种数字，求每行、每列最小值均为 $1$ 的方案数。
 
 $f(i,j)$ 表示钦定有 $i$ 行、$j$ 列不满足要求的方案数。（即**至少形式**）
 
@@ -94,3 +96,57 @@ $$f(x,y) = \sum_{i=x}^{n} \sum_{j=y}^{n} \binom{i}{x} \binom{j}{y} g(i,j)$$
 ### [CF997C Sky Full of Stars](https://codeforces.com/problemset/problem/997/C)
 
 *AC on 2021.10.28 [CODE](/post/code/#CF997C)*
+
+题意：$n \times n$ 的网格，用红绿蓝三种颜色染，求至少一行或一列是同一种颜色的方案数。
+
+同样是先求反面（即 $0$ 行 $0$ 列）。不过感觉这题是这几道题目里相当难的一道了。
+
+$f(x,y)$ 表示钦定有 $i$ 行 $j$ 列是同种颜色的方案数。
+
+$g(x,y)$ 表示恰好有 $i$ 行 $j$ 列是同种颜色的方案数。
+
+$$f(x,y) = \sum_{i=x}^{n} \sum_{j=y}^{n} \binom{i}{x} \binom{j}{y} g(i,j)$$
+
+我们要求的是一个 $g(0,0)$，接下来需要算出每个 $f(i,j)$。这个大分类讨论就是难点了。
+
+$$
+\begin{aligned}
+f(i,j) &= \binom{n}{i} \binom{n}{j} 3 \cdot 3^{(n-i)(n-j)} &(i,j \neq 0) \\
+f(i,0) &= \binom{n}{i} 3^i \cdot 3^{n(n-i)} &(i \neq 0, j = 0) \\
+f(0,0) &= 3^{n^2} &(i,j = 0)
+\end{aligned}
+$$
+
+于是有：
+
+$$g(0,0) = \sum_{i=0}^{n} \sum_{j=0}^{n} (-1)^{i+j} f(i,j) $$
+
+求和！
+
+两个参数都不为 $0$ 的部分：
+
+$$
+\begin{aligned}
+&= \sum_{i=1}^{n} \sum_{j=1}^{n} (-1)^{i+j} \binom{n}{i} \binom{n}{j} 3 \cdot 3^{(n-i)(n-j)} \\
+&= 3^{n^2 + 1} \sum_{i=1}^{n} \sum_{j=1}^{n} (-1)^{i+j} \binom{n}{i} \binom{n}{j} 3^{-in-jn+ij} \\
+&= 3^{n^2 + 1} \sum_{i=1}^{n} \binom{n}{i} (-1)^i 3^{-in} \sum_{j=1}^{n} \binom{n}{j} (-1)^j 3^{-jn} \cdot 3^{ij}
+\end{aligned}
+$$
+
+接下来要消掉 $\sum_{j=1}^{n} \binom{n}{j} (-1)^j 3^{-jn} \cdot 3^{ij}$ 这个烦人的东西：
+
+$$
+\begin{aligned}
+\sum_{j=1}^{n} \binom{n}{j} (-1)^j 3^{-jn} \cdot 3^{ij} &= \sum_{j=1}^{n} \binom{n}{j} (-1)^j 3^{j(i-n)} \\
+&= \sum_{j=1}^{n} \binom{n}{j} 1^{n-j} (-3^{i-n})^j \\
+&= (1-3^{i-n})^n - 1
+\end{aligned}
+$$
+
+最后两行二项式定理转化后面要减去 $1$，因为求和下标不到 $0$。
+
+后面两种情况相对来说好讨论一点，~~不写了~~。其实代码关键部分只有1行
+
+```cpp
+for(int i=1;i<=n;i++) (ans+=1ll*((i&1)?(mod-1):1)*C(n,i)%mod*qpow(3,1ll*(mod-1-i)*n%(mod-1))%mod*(qpow((1-qpow(3,i-n+mod-1)+mod)%mod,n)-1+mod)%mod)%=mod;
+```
