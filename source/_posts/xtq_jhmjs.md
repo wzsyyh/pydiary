@@ -96,16 +96,16 @@ category: [神犇]
 
    证明：
    
-   $$
-   \begin{aligned}
-   FWT(c)_i&=\sum\limits_{j=0}^{2^n-1}(-1)^{|i\wedge j|}c_j\\\\
-   &=\sum\limits_{j=0}^{2^n-1}(-1)^{|i\wedge j|}\sum\limits_{k=0}^{2^n-1}\sum\limits_{l=0}^{2^n-1}[k\oplus l=j]a_kb_l\\\\
-   &=\sum\limits_{k=0}^{2^n-1}\sum\limits_{l=0}^{2^n-1}(-1)^{|(k\oplus l)\wedge i|}a_kb_l\\\\
-   &=\sum\limits_{k=0}^{2^n-1}\sum\limits_{l=0}^{2^n-1}(-1)^{|k\wedge i|}a_k\cdot (-1)^{|l\wedge i|} b_l\\\\
-   &=(\sum\limits_{k=0}^{2^n-1}(-1)^{|k\wedge i|}a_k)(\sum\limits_{l=0}^{2^n-1}(-1)^{|l\wedge i|}b_l)\\\\
-   &=FWT(a)_i\cdot FWT(b)_i
-   \end{aligned}
-   $$
+$$
+\begin{aligned}
+   FWT(c)_i&=\sum\limits_{j=0}^{2^n-1}(-1)^{|i\wedge j|}c_j \\\\
+   &=\sum\limits_{j=0}^{2^n-1}(-1)^{|i\wedge j|}\sum\limits_{k=0}^{2^n-1}\sum\limits_{l=0}^{2^n-1}[k\oplus l=j]a_kb_l \\\\
+   &=\sum\limits_{k=0}^{2^n-1}\sum\limits_{l=0}^{2^n-1}(-1)^{|(k\oplus l)\wedge i|}a_kb_l \\\\
+   &=\sum\limits_{k=0}^{2^n-1}\sum\limits_{l=0}^{2^n-1}(-1)^{|k\wedge i|}a_k\cdot (-1)^{|l\wedge i|} b_l \\\\
+   &=(\sum\limits_{k=0}^{2^n-1}(-1)^{|k\wedge i|}a_k)(\sum\limits_{l=0}^{2^n-1}(-1)^{|l\wedge i|}b_l) \\\\
+   &=FWT(a)_i\cdot FWT(b)_i \\\\
+\end{aligned}
+$$
 
    所以我们要做的事情就是分别对 $a,b$ 求出 $FWT$ 后对应相乘再做 $FWT$ 的逆变换即可。
 
