@@ -93,6 +93,8 @@ $$f(x,y) = \binom{n}{x} \binom{n}{y} (k-1)^{n^2 - (n-x)(n-y)} k^{(n-x)(n-y)}$$
 
 $$f(x,y) = \sum_{i=x}^{n} \sum_{j=y}^{n} \binom{i}{x} \binom{j}{y} g(i,j)$$
 
+> 类型3：需要dp或其他方式先求出 $f(n)$ 的综合题
+
 ### [CF997C Sky Full of Stars](https://codeforces.com/problemset/problem/997/C)
 
 *AC on 2021.10.28 [CODE](/post/code/#CF997C)*
@@ -150,3 +152,25 @@ $$
 ```cpp
 for(int i=1;i<=n;i++) (ans+=1ll*((i&1)?(mod-1):1)*C(n,i)%mod*qpow(3,1ll*(mod-1-i)*n%(mod-1))%mod*(qpow((1-qpow(3,i-n+mod-1)+mod)%mod,n)-1+mod)%mod)%=mod;
 ```
+
+### [BZOJ3622 已经没有什么好害怕的了](https://hydro.ac/d/bzoj/p/3622)
+
+*AC on 2021.10.28 [CODE](\post\code\#BZOJ3622)*
+
+题意：给糖果和药片各 $n$ 个，每个都有一个权值，一一对应搭配。问满足“糖果比药片权值大的”比“药片比糖果权值大的”多恰好 $k$ 个的方案数。
+
+$$dp_{i,j} = dp_{i-1,j} + (L_i - j + 1) \times dp{i-1,j-1}$$
+
+$$f(i) = dp_{n,i} \times (n-i)!$$
+
+$$f(k) = \sum_{i=k}^{n} \binom{i}{k} g(i)$$
+
+反演后 $g(k)$ 就是答案啦。比上面那题简单点。
+
+### [CF285E Positions in Permutations](https://codeforces.com/problemset/problem/285/E)
+
+*AC on 2021.10.28 [CODE](/post/code/#CF285E)*
+
+题意：称一个 $1$ 到 $n$ 的排列的完美数为满足 $|P_i - i = 1|$ 的个数。求有多少个长度为 $n$ 的完美数恰好为 $m$ 的排列。
+
+懒得打dp式了。但确实是一道好题。

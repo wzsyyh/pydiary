@@ -622,3 +622,147 @@ signed main() {
     return 0;
 }
 ```
+
+### BZOJ3622
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+typedef pair<int,int> pi;
+typedef long long ll;
+inline int gin() {
+    int s=0,f=1;
+    char c=getchar();
+    while(c<'0' || c>'9') {
+        if(c=='-') f=-1;
+        c=getchar();
+    }
+    while(c>='0'&&c<='9') {
+        s=(s<<3)+(s<<1)+(c^48);
+        c=getchar();
+    }
+    return s*f;
+}
+
+const int N=2005,mod=1e9+9;
+int n,k,f[N][N],ans,a[N],b[N],F[N],L[N];
+int inv[N],fact[N],finv[N];
+
+void init() {
+    inv[1]=1;
+    for(int i=2;i<=2000;i++) inv[i]=1ll*(mod-mod/i)*inv[mod%i]%mod;
+    fact[0]=finv[0]=1;
+    for(int i=1;i<=2000;i++) {
+        fact[i]=1ll*fact[i-1]*i%mod;
+        finv[i]=1ll*finv[i-1]*inv[i]%mod;
+    }
+}
+
+int C(int n,int m) {
+    if(m<0 || m>n) return 0;
+    return 1ll*fact[n]*finv[m]%mod*finv[n-m]%mod;
+}
+
+signed main() {
+    #ifndef ONLINE_JUDGE
+    freopen("test.in","r",stdin);
+    freopen("test.out","w",stdout);
+    #endif
+    init();
+    n=gin(),k=gin();
+    if((n+k)&1) puts("0"),exit(0);
+    k=n+k>>1;
+    for(int i=1;i<=n;i++) a[i]=gin();
+    for(int i=1;i<=n;i++) b[i]=gin();
+    sort(a+1,a+n+1), sort(b+1,b+n+1);
+    for(int i=1,j=0;i<=n;i++) {
+        while(j<n && a[i]>b[j+1]) j++;
+        L[i]=j;
+    }
+    f[0][0]=1;
+    for(int i=1;i<=n;i++) for(int j=0;j<=i;j++)
+        f[i][j]=(f[i-1][j]+(j?1ll*f[i-1][j-1]*(L[i]-j+1)%mod:0))%mod;
+    for(int i=0;i<=n;i++) F[i]=1ll*f[n][i]*fact[n-i]%mod;
+    for(int i=k;i<=n;i++)
+        (ans+=1ll*((i-k)%2?(mod-1):1)*C(i,k)%mod*F[i]%mod)%=mod;
+    printf("%d\n",ans);
+    return 0;
+}
+```
+
+### CF285E
+
+```cpp
+#include <bits/stdc++.h>
+#define int long long
+using namespace std;
+typedef pair<int,int> pi;
+typedef long long ll;
+inline int gin() {
+    int s=0,f=1;
+    char c=getchar();
+    while(c<'0' || c>'9') {
+        if(c=='-') f=-1;
+        c=getchar();
+    }
+    while(c>='0'&&c<='9') {
+        s=(s<<3)+(s<<1)+(c^48);
+        c=getchar();
+    }
+    return s*f;
+}
+
+const int N=1005,mod=1e9+7;
+int n,m,f[N][N][2][2],F[N];
+int inv[N],fact[N],finv[N];
+
+void init() {
+    inv[1]=1;
+    for(int i=2;i<=1000;i++) inv[i]=1ll*(mod-mod/i)*inv[mod%i]%mod;
+    fact[0]=finv[0]=1;
+    for(int i=1;i<=1000;i++) {
+        fact[i]=1ll*fact[i-1]*i%mod;
+        finv[i]=1ll*finv[i-1]*inv[i]%mod;
+    }
+}
+
+int C(int n,int m) {
+    if(m<0 || m>n) return 0;
+    return 1ll*fact[n]*finv[m]%mod*finv[n-m]%mod;
+}
+
+signed main() {
+    #ifndef ONLINE_JUDGE
+    freopen("test.in","r",stdin);
+    freopen("test.out","w",stdout);
+    #endif
+    init();
+    n=gin(),m=gin();
+    f[1][0][0][0]=f[1][1][0][1]=1;
+    for(int i=2;i<n;i++) {
+        f[i][0][0][0]=1;
+        for(int j=1;j<=i;j++) {
+            //i完美
+            (f[i][j][0][0]+=f[i-1][j-1][0][0])%=mod;
+            (f[i][j][1][0]+=f[i-1][j-1][0][1])%=mod;
+            (f[i][j][0][1]+=f[i-1][j-1][0][0]+f[i-1][j-1][1][0])%=mod;
+            (f[i][j][1][1]+=f[i-1][j-1][0][1]+f[i-1][j-1][1][1])%=mod;
+            //i不完美
+            (f[i][j][0][0]+=f[i-1][j][0][0]+f[i-1][j][1][0])%=mod;
+            (f[i][j][1][0]+=f[i-1][j][0][1]+f[i-1][j][1][1])%=mod;
+        }
+    }
+    //单独考虑第n位
+    f[n][0][0][0]=1;
+    for(int i=1;i<=n;i++) {
+        (f[n][i][0][0]+=f[n-1][i-1][0][0]+f[n-1][i][0][0]+f[n-1][i][1][0])%=mod;
+        (f[n][i][1][0]+=f[n-1][i-1][0][1]+f[n-1][i][0][1]+f[n-1][i][1][1])%=mod;
+    }
+    for(int i=0;i<=n;i++) F[i]=(f[n][i][0][0]+f[n][i][1][0])*fact[n-i]%mod;
+    int ans=0;
+    for(int i=m;i<=n;i++)
+        (ans+=((i-m)%2?(mod-1):1)*C(i,m)%mod*F[i]%mod)%=mod;
+    printf("%lld\n",ans);
+    return 0;
+}
+```
