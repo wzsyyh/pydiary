@@ -41,7 +41,7 @@ $$f(k) = \sum_{i=m}^{k}{ \binom{k}{i} {g(i)} } \iff g(k) = \sum_{i=m}^{k} (-1)^{
 
 ### [[BZOJ2839]集合计数](https://hydro.ac/d/bzoj/p/2839)
 
-*AC on 2021.10.28 [CODE](/post/code/#BZOJ2839])*
+*AC on 2021.10.28 [CODE](/post/code/#BZOJ2839)*
 
 $$\binom{n}{k} (2^{2^{n-k}}-1) = f(k) = \sum_{i=k}^{n} \binom{i}{k}{g(i)}$$
 
