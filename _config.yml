@@ -3,8 +3,6 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-
-
 title: Push_Y's diary
 subtitle: Push_Y's diary
 description: ''
@@ -100,7 +98,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: "hexo-theme-material-master"
+theme: "hexo-theme-matery-develop"
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
