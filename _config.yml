@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Push_Y's blog
-subtitle: ''
+title: Push_Y's diary
+subtitle: 'Push_Y's diary'
 description: ''
 keywords:
 author: Push_Y
-language: en
+language: zh-CN
 timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://www.wzsyyh.ml
+url: http://www.wzsyyh.ml/diary
 permalink: post/:title/
 permalink_defaults:
 pretty_urls:
@@ -104,5 +104,5 @@ theme: "hexo-theme-matery-develop"
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/wzsyyh/wzsyyh.github.io
+  repo: https://github.com/wzsyyh/pydiary
   branch: master
