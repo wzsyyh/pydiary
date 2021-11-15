@@ -5,7 +5,7 @@ date: 2021-07-20 21:34:47
 
 [Push_Y's blog](https://www.wzsyyh.ml)
 
-> 欢迎来到 Push_Y 的日记！
+> 欢迎来到 Push_Y 的日记小站！
 
 ![](https://www.wzsyyh.ml/image/Push_Y.png)
 
