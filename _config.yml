@@ -71,6 +71,17 @@ default_category: uncategorized
 category_map:
 tag_map:
 
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
+
+
 # Metadata elements
 ## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
 meta_generator: true
@@ -98,7 +109,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: "hexo-theme-matery-develop"
+theme: "hexo-theme-material-master"
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
