@@ -65,9 +65,9 @@ cover:
 # 配置首页显示"梦想"的语句.
 dream:
   enable: true
-  showTitle: true
-  title: 我们曾经的执着
-  text: 不过星火闪过
+  showTitle: false
+  title: 
+  text: 不求任何人满意 只要对得起自己
 
 # Whether to display the musics.
 # 是否在首页显示音乐.
@@ -547,8 +547,10 @@ subtitle:
   typeSpeed: 100 # 打字速度
   backSpeed: 50 # 删除速度
   sub:
+    - 也许迷途的惆怅会扯碎我的脚步
+    - 可我相信未来会给我一双梦想的翅膀
+    - 虽然失败的苦痛已让我遍体鳞伤
     - 可我坚信光明，就在远方
-    - 竹密无妨溪水过，天高不碍白云飞
 
 # 手机二级菜单.
 navMenu:
