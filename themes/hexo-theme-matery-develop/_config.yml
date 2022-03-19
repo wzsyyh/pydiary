@@ -16,8 +16,8 @@ menu:
   About:
     url: /about
     icon: fas fa-user-circle
-  Contact:
-    url: /contact
+  Blog:
+    url: https://www.wzsyyh.ml/
     icon: fas fa-comments
   Friends:
     url: /friends
